@@ -1,0 +1,26 @@
+# completion
+setopt autocd extendedglob
+setopt autolist automenu nobeep
+
+autoload -Uz compinit
+compinit
+zstyle :compinstall filename '/home/chad/.zshrc'
+
+# allow approximate
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+#zstyle ':completion:*:approximate:*' max-errors 1 numeric
+# allow one error for every three characters typed in approximate completer
+zstyle -e ':completion:*:approximate:*' max-errors \
+    'reply=( $(( ($#PREFIX+$#SUFFIX)/2 )) numeric )'
+zstyle ':completion:*:functions' ignored-patterns '_*'
+# tab completion for killall :D
+zstyle ':completion:*:killall:*:*' command 'ps -e -o comm'
+zstyle ':completion:*:ka:*:*' command 'ps -e -o comm'
+# cd not select parent dir.
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
+# match uppercase from lowercase
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+#completion for netcfg
+compdef nc=netcfg
+compdef ka=killall

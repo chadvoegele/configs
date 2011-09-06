@@ -1,0 +1,22 @@
+#!/bin/sh
+# keyboard
+setxkbmap us_mod -option ctrl:nocaps
+xset r rate 250 20
+xbindkeys &
+
+# no bell
+xset b off
+
+# screen settings
+xset dpms 0 0 60
+xbacklight -set 50
+
+set -a DE
+DE="gnome"
+export DE
+
+# set up desktop
+source /home/chad/.fehbg
+/home/chad/.dzen/bin/dzen_config.py &
+
+exec openbox

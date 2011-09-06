@@ -1,0 +1,63 @@
+! Save this file as ~/.Xdefaults and start a term without any options to
+! see what it does.
+
+! Use ! for comments (if you don't like a certain setting)
+
+! The `Xterm' settings work for most terms like aterm, xterm, wterm and rxvt.
+
+! If changing things in this file doesn't result in changes in your term
+! you should run `xrdb -load ~/.Xdefaults'
+
+URxvt.termName:              rxvt-unicode
+
+! Black
+*color0:      #5A5A5A
+*color8:      #3e3e3e
+! Red
+*color1:      #C72424
+*color9:      #C90808
+! Green
+*color2:      #2F7D19
+*color10:     #16870B
+! Yellow
+*color3:      #16870B
+*color11:     #B0913A
+! Blue
+*color4:      #0042A8
+*color12:     #345D9E
+! Purple
+*color5:      #5F5A90
+*color13:     #826AB1
+! Cyan
+*color6:      #317F99
+*color14:     #0D687A
+! White
+*color7:      #D1D1D1
+*color15:     #EDEDED
+
+
+!*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+*font: -*-terminus-medium-*-*-*-24-*-*-*-*-*-*-*
+!*boldFont: -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
+*boldFont: -*-terminus-bold-*-*-*-24-*-*-*-*-*-*-*
+
+!urxvt*keysym.0xFFC4:  \033<S-Insert>
+!URxvt.keysym.C-semicolon:   \033<C-;>
+
+urxvt*scrollBar:            false
+urxvt*background:  #BDBDBD
+!urxvt*foreground:  #cfcfcf
+urxvt*cursorColor: #4D4D4D
+urxvt*cursorColor2: #CFCFCF
+urxvt*externallBorder:   0
+URxvt*internalBorder:    0
+urxvt.mouseWheelScrollPage:   true
+urxvt*iconName:			rxvt-unicode.png
+URxvt.keysym.C-period:  \033.
+
+
+! MRXVT
+mrxvt*vt0*command: /usr/bin/zsh -ls
+
+<Btn4Down>,<Btn4Up>:scroll-back(1,line)\n\
+<Btn5Down>,<Btn5Up>:scroll-forw(1,line)\n\
