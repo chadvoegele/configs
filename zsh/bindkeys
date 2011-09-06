@@ -1,0 +1,53 @@
+# key bindings
+bindkey -r "^s"
+bindkey -r "^q"
+
+bindkey -e
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[4~" end-of-line
+bindkey "\e[5~" beginning-of-history
+bindkey "\e[6~" end-of-history
+bindkey "\e[3~" delete-char
+bindkey "\e[2~" quoted-insert
+bindkey "\e[5C" forward-word
+bindkey "\eOc" emacs-forward-word
+bindkey "\e[5D" backward-word
+bindkey "\eOd" emacs-backward-word
+bindkey "\e\e[C" forward-word
+bindkey "\e\e[D" backward-word
+bindkey "^H" backward-delete-char
+# for rxvt
+bindkey "\e[8~" end-of-line
+bindkey "\e[7~" beginning-of-line
+# for non RH/Debian xterm, can't hurt for RH/DEbian xterm
+bindkey "\eOH" beginning-of-line
+bindkey "\eOF" end-of-line
+# for freebsd console
+bindkey "\e[H" beginning-of-line
+bindkey "\e[F" end-of-line
+# completion in the middle of a line
+bindkey '^i' expand-or-complete-prefix
+bindkey '^v' accept-line
+
+#my bindings
+bindkey '^g' emacs-forward-word
+bindkey '^k' emacs-backward-word
+bindkey "^Y" yank
+bindkey "^[^Y" yank-pop      ##ctrl-alt y
+bindkey "^[^M" set-mark-command
+bindkey "^[^K" kill-region
+bindkey "^ " expand-or-complete-prefix
+bindkey '^.' insert-last-word # needs map in .Xdefaults
+bindkey "^n" down-line-or-history
+
+# quick change directories
+rationalise-dot() {
+ if [[ $LBUFFER = *.. ]]; then
+   LBUFFER+=/..
+ else
+   LBUFFER+=.
+ fi
+}
+zle -N rationalise-dot
+bindkey . rationalise-dot
+

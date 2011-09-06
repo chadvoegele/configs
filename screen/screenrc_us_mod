@@ -1,0 +1,57 @@
+#
+# This is an example for the global screenrc file.
+# You may want to install this file as /usr/local/etc/screenrc.
+# Check config.h for the exact location.
+#
+# Flaws of termcap and standard settings are done here.
+#
+
+startup_message off
+
+#hardstatus alwayslastline "%{kY} %{+u kY}%n %t%{-u kY} %=[ %W ] "
+
+hardstatus alwayslastline
+
+#hardstatus string '%= %?%{wk}%?%-w%?%{=-b kw}[%{W}%n %t%?(%u)%?]%{= kw}%?%+w%?%= %{w} %C%{g}%{W}'
+hardstatus string '%{k}%= %?%-w%?%{d}[%n %t]%{-}%?%+w%?%=  %{d}%C'
+
+escape ^Tt
+screen -t zsh 0
+activity ""
+bell_msg ""
+vbell off
+vbell_msg ""
+defscrollback 1024
+altscreen on
+
+#bindkey -k F2 xclippaste
+
+#remove some stupid / dangerous key bindings
+bind ^k
+bind ^\
+bind ^Q
+bind q
+bind ^S
+bind s
+#make them better
+bind \\ quit
+bind K kill
+bind I login on
+bind O login off
+bind } history
+
+# h-left, j-down, k-up, l-right, ^d-half page down, ^u-half page up, ^b-full
+# page up, ^f-full page down, 0-line begin, $-line end
+markkeys h=j:j=k:k=i:l=l:^d=K:^u=I:^b=^i:^f=^k:0=J:$=L
+
+# If a window goes unresponsive, don't block the whole session waiting for it.
+nonblock on
+
+# disable Ctrl-S/Ctrl-Q "flow control"
+defflow off
+
+# nethack on            # nethackish status messages
+
+#termcapinfo xterm ti@:te@
+#termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+termcapinfo rxvt 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'

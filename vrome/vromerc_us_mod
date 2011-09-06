@@ -1,0 +1,21 @@
+""" .vromerc example file
+
+set disablesites=mail.google.com, reader.google.com, docs.google.com, spreadsheets.google.com
+map <C-k> <C-f>
+  "" scroll abs. left
+map <C-j> 0
+  "" scroll abs. right
+map <C-l> $
+  "" back in history
+map J H
+  "" forward in history
+map L L
+  "" up, right, down, left
+map i k
+map l l
+map k j
+map j h
+map <C-f> <C-v><C-f>
+map <C-l> <C-v><C-l>
+
+" vim: set ft=vim:
