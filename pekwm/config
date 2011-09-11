@@ -34,7 +34,7 @@ Screen {
     TrimTitle = "..."
     FullscreenAbove = "True"
     FullscreenDetect = "True"
-    HonourRandr = "True"
+    HonourRandr = "False"
     HonourAspectRatio = "True"
     EdgeSize = "19 1 1 1"
     EdgeIndent = "True"
