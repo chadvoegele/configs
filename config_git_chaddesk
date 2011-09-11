@@ -7,7 +7,7 @@ $CONFIG_GIT/config_link.py -
 $CONFIG_GIT/.gitignore -
 $CONFIG_GIT/fflinks/sites $HOME/.config/fflinks/sites
 $CONFIG_GIT/fflinks/searches $HOME/.config/fflinks/searches
-$CONFIG_GIT/gmrun/gmrunrc_chaddesk /home/chad/.config/gmrun/gmrunrc_chaddesk
+$CONFIG_GIT/gmrun/gmrunrc_chaddesk $HOME/.config/gmrun/gmrunrc_chaddesk
 $CONFIG_GIT/less/lesskey_colemak $HOME/.config/less/lesskey_colemak
 $CONFIG_GIT/less/lesskey_us_mod $HOME/.config/less/lesskey_us_mod
 $CONFIG_GIT/screen/screenrc_colemak $HOME/.config/screen/screenrc_colemak
@@ -21,6 +21,7 @@ $CONFIG_GIT/zsh/bindkeys $HOME/.config/zsh/bindkeys
 $CONFIG_GIT/zsh/completion $HOME/.config/zsh/completion
 $CONFIG_GIT/zsh/titles $HOME/.config/zsh/titles
 $CONFIG_GIT/zsh/zshrc $HOME/.config/zsh/zshrc
+$CONFIG_GIT/zsh/prompt $HOME/.config/zsh/prompt
 $CONFIG_GIT/bin/arst.sh $HOME/bin/arst.sh
 $CONFIG_GIT/bin/asdf.sh $HOME/bin/asdf.sh
 $CONFIG_GIT/xbindkeysrc_chadthinkpad -
