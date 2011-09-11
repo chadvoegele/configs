@@ -11,12 +11,9 @@ xset b off
 xset dpms 0 0 60
 xbacklight -set 50
 
-set -a DE
-DE="gnome"
-export DE
-
 # set up desktop
 source /home/chad/.fehbg
 /home/chad/.dzen/bin/dzen_config.py &
 
-exec openbox
+# exec openbox
+exec pekwm

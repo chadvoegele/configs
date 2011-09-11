@@ -24,3 +24,4 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 #completion for netcfg
 compdef nc=netcfg
 compdef ka=killall
+compdef smart_sudo=sudo

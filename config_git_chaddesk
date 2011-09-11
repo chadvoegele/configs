@@ -3,7 +3,8 @@ $CONFIG_GIT/config_git_chadthinkpad - # comment
 $CONFIG_GIT/config_git_chaddesk -
 $CONFIG_GIT/link_record_chadthinkpad -
 $CONFIG_GIT/link_record_chaddesk -
-$CONFIG_GIT/config_link.py -       
+$CONFIG_GIT/config_link.py -
+$CONFIG_GIT/.gitignore -
 $CONFIG_GIT/fflinks/sites $HOME/.config/fflinks/sites
 $CONFIG_GIT/fflinks/searches $HOME/.config/fflinks/searches
 $CONFIG_GIT/gmrun/gmrunrc_chaddesk /home/chad/.config/gmrun/gmrunrc_chaddesk
