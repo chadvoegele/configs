@@ -35,3 +35,7 @@ $CONFIG_GIT/dot_vim/indent_ledger.vim $HOME/.vim/indent/ledger.vim
 $CONFIG_GIT/dot_vim/syntax_ledger.vim $HOME/.vim/syntax/ledger.vim
 $CONFIG_GIT/dot_vim/compiler_ledger.vim $HOME/.vim/compiler/ledger.vim
 $CONFIG_GIT/ledgerrc $HOME/.ledgerrc
+$CONFIG_GIT/pekwm/config $HOME/.pekwm/config
+$CONFIG_GIT/pekwm/keys $HOME/.pekwm/keys
+$CONFIG_GIT/pekwm/mouse $HOME/.pekwm/mouse
+$CONFIG_GIT/pekwm/menu $HOME/.pekwm/menu
