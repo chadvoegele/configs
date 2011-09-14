@@ -19,6 +19,7 @@ bindkey -M vicmd j vi-backward-char
 bindkey -M vicmd i vi-up-line-or-history
 bindkey -M vicmd k vi-down-line-or-history
 bindkey -M vicmd s vi-insert
+bindkey -M viins '^.' insert-last-word 
 
 # my cheap way of ignoring emacs bindings but keeping them for later
 if [ ]; then
@@ -60,4 +61,3 @@ if [ ]; then
   bindkey '^.' insert-last-word # needs map in .Xdefaults
   bindkey "^n" down-line-or-history
 fi
-
