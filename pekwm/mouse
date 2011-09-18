@@ -43,40 +43,40 @@ OtherTitle {
 	# Enter = "Any Any" { Actions = "Focus" }
 }
 
-#Border {
-#	TopLeft {
+Border {
+	TopLeft {
 #		# Remove the following line if you want to use click to focus.
 #		Enter = "Any Any" { Actions = "Focus" }
-#		ButtonPress = "1" { Actions = "Focus; Resize TopLeft" } }
-#	Top {
+		ButtonPress = "1" { Actions = "Focus; Resize TopLeft" } }
+	Top {
 #		# Remove the following line if you want to use click to focus.
 #		Enter = "Any Any" { Actions = "Focus" }
-#		ButtonPress = "1" { Actions = "Focus; Resize Top" } }
-#	TopRight {
+		ButtonPress = "1" { Actions = "Focus; Resize Top" } }
+	TopRight {
 #		# Remove the following line if you want to use click to focus.
 #		Enter = "Any Any" { Actions = "Focus" }
-#		ButtonPress = "1" { Actions = "Focus; Resize TopRight" } }
-#	Left {
+		ButtonPress = "1" { Actions = "Focus; Resize TopRight" } }
+	Left {
 #		# Remove the following line if you want to use click to focus.
 #		Enter = "Any Any" { Actions = "Focus" }
-#		ButtonPress = "1" { Actions = "Focus; Resize Left" } }
-#	Right {
+		ButtonPress = "1" { Actions = "Focus; Resize Left" } }
+	Right {
 #		# Remove the following line if you want to use click to focus.
 #		Enter = "Any Any" { Actions = "Focus" }
-#		ButtonPress = "1" { Actions = "Focus; Resize Right" } }
-#	BottomLeft {
+		ButtonPress = "1" { Actions = "Focus; Resize Right" } }
+	BottomLeft {
 #		# Remove the following line if you want to use click to focus.
 #		Enter = "Any Any" { Actions = "Focus" }
-#		ButtonPress = "1" { Actions = "Focus; Resize BottomLeft" } }
-#	Bottom {
+		ButtonPress = "1" { Actions = "Focus; Resize BottomLeft" } }
+	Bottom {
 #		# Remove the following line if you want to use click to focus.
 #		Enter = "Any Any" { Actions = "Focus" }
-#		ButtonPress = "1" { Actions = "Focus; Resize Bottom" } }
-#	BottomRight {
+		ButtonPress = "1" { Actions = "Focus; Resize Bottom" } }
+	BottomRight {
 #		# Remove the following line if you want to use click to focus.
 #		Enter = "Any Any" { Actions = "Focus" }
-#		ButtonPress = "1" { Actions = "Focus; Resize BottomRight" } }
-#}
+		ButtonPress = "1" { Actions = "Focus; Resize BottomRight" } }
+}
 
 ScreenEdge {
 	Down {
