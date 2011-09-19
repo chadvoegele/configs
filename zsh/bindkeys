@@ -1,8 +1,3 @@
-# key bindings
-bindkey -r "^s"
-bindkey -r "^q"
-
-
 # quick change directories
 rationalise-dot() {
  if [[ $LBUFFER = *.. ]]; then
@@ -14,12 +9,48 @@ rationalise-dot() {
 zle -N rationalise-dot
 bindkey . rationalise-dot
 
+# two functions below could be simplified by passing in $cmd
+turbo_left() {
+  cmd="vi-backward-char"
+  zle $cmd
+  zle $cmd
+  zle $cmd
+  zle $cmd
+  zle $cmd
+}
+zle -N turbo_left
+
+turbo_right() {
+  cmd="vi-forward-char"
+  zle $cmd
+  zle $cmd
+  zle $cmd
+  zle $cmd
+  zle $cmd
+}
+zle -N turbo_right
+
 bindkey -v
 bindkey -M vicmd j vi-backward-char
+bindkey -M vicmd J turbo_left
+bindkey -M vicmd L turbo_right
 bindkey -M vicmd i vi-up-line-or-history
 bindkey -M vicmd k vi-down-line-or-history
 bindkey -M vicmd s vi-insert
+bindkey -M viins '^[' vi-cmd-mode
 bindkey -M viins '^.' insert-last-word 
+bindkey -M viins '^h' backward-delete-char
+bindkey -M viins '^w' backward-kill-word
+bindkey -M viins '^u' kill-whole-line
+bindkey -M viins '^e' end-of-line
+bindkey -M viins '^a' beginning-of-line
+bindkey -M viins "^d" delete-char
+bindkey -M viins "^f" forward-char
+bindkey -M viins "^b" backward-char
+bindkey -M viins "^n" down-line-or-history
+bindkey -M viins "^p" up-line-or-history
+bindkey -M viins "^s" history-incremental-search-forward
+bindkey -M viins "^r" history-incremental-search-backward
 
 # my cheap way of ignoring emacs bindings but keeping them for later
 if [ ]; then
@@ -61,3 +92,12 @@ if [ ]; then
   bindkey '^.' insert-last-word # needs map in .Xdefaults
   bindkey "^n" down-line-or-history
 fi
+
+# key bindings
+bindkey -r "^s"
+bindkey -r "^q"
+
+# remove delay using escape to enter command mode
+bindkey -rpM viins '\e'
+bindkey -rpM viins '^['
+KEYTIMEOUT=10

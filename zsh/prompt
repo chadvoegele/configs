@@ -1,3 +1,9 @@
+zle-isearch-update() { zle -M "Line $HISTNO"; }
+zle -N zle-isearch-update
+
+zle-isearch-exit() { zle -M ""; }
+zle -N zle-isearch-exit
+
 function zle-keymap-select {
   prompt_chad_precmd
   zle reset-prompt
