@@ -1,6 +1,8 @@
 # functions
 function open_file_or_dir() {
-  if [[ $# -eq 1 && -d $1 ]]; then
+  if [[ $# -eq 0 ]]; then
+    ls --color=auto;
+  elif [[ $# -eq 1 && -d $1 ]]; then
     builtin cd $1;
   else
     open_file $@;
