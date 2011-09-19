@@ -156,6 +156,7 @@ nnoremap gt7 :tabn 7<CR>
 nnoremap gt8 :tabn 8<CR>
 nnoremap gt9 :tabn 9<CR>
 
+" this conflicts with decrease fold. Need to remap
 " shortcut for checktime to update file vim
 nnoremap gr :checktime<CR>
 
