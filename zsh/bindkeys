@@ -12,21 +12,13 @@ bindkey . rationalise-dot
 # two functions below could be simplified by passing in $cmd
 turbo_left() {
   cmd="vi-backward-char"
-  zle $cmd
-  zle $cmd
-  zle $cmd
-  zle $cmd
-  zle $cmd
+  for i in {1..5}; do; zle $cmd; done;
 }
 zle -N turbo_left
 
 turbo_right() {
   cmd="vi-forward-char"
-  zle $cmd
-  zle $cmd
-  zle $cmd
-  zle $cmd
-  zle $cmd
+  for i in {1..5}; do; zle $cmd; done;
 }
 zle -N turbo_right
 
@@ -38,7 +30,7 @@ bindkey -M vicmd i vi-up-line-or-history
 bindkey -M vicmd k vi-down-line-or-history
 bindkey -M vicmd s vi-insert
 bindkey -M viins '^[' vi-cmd-mode
-bindkey -M viins '^.' insert-last-word 
+bindkey -M viins '^^' insert-last-word 
 bindkey -M viins '^h' backward-delete-char
 bindkey -M viins '^w' backward-kill-word
 bindkey -M viins '^u' kill-whole-line
@@ -49,8 +41,8 @@ bindkey -M viins "^f" forward-char
 bindkey -M viins "^b" backward-char
 bindkey -M viins "^n" down-line-or-history
 bindkey -M viins "^p" up-line-or-history
-bindkey -M viins "^s" history-incremental-search-forward
 bindkey -M viins "^r" history-incremental-search-backward
+bindkey -M viins "^s" history-incremental-search-forward
 
 # my cheap way of ignoring emacs bindings but keeping them for later
 if [ ]; then
@@ -94,7 +86,7 @@ if [ ]; then
 fi
 
 # key bindings
-bindkey -r "^s"
+# bindkey -r "^s"
 bindkey -r "^q"
 
 # remove delay using escape to enter command mode
