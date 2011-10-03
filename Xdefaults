@@ -53,7 +53,7 @@ urxvt*externallBorder:   0
 URxvt*internalBorder:    0
 urxvt.mouseWheelScrollPage:   true
 urxvt*iconName:			rxvt-unicode.png
-! used to be \033.
+! used to be \033. see ascii character control codes
 ! now this will just enter a ^^ and then the shell will take care of it
 ! the \033 enters an escape and this is no good for vim in zsh
 URxvt.keysym.C-period:  \036
