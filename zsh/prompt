@@ -22,6 +22,7 @@ prompt_chad_precmd () {
   # ref: http://www.nparikh.org/unix/prompt.php
   # ref: http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
   prompt_color_Bblack='%{\e[1;30m%}' #bold black
+  prompt_color_black='%{\e[0;30m%}' #bold black
   prompt_color_default='%{\e[0m%}'   #default
   prompt_color_blue='%{\e[0;34m%}'   #blue
   prompt_color_Bred='%{\e[1;31m%}'   #blue
@@ -34,7 +35,11 @@ prompt_chad_precmd () {
     prompt_vim_status="%F${${KEYMAP/vicmd/$prompt_normal_mode}/(main|viins)/$prompt_insert_mode}%f";
   fi
 
-  prompt_line="$prompt_color_Bblack%n$prompt_color_default:$prompt_color_blue%~$prompt_vim_status$prompt_color_default "
+  if [ ! -z $SSH_CONNECTION ]; then
+    prompt_line="$prompt_color_Bblack%n$prompt_color_black@%m$prompt_color_default:$prompt_color_blue%~$prompt_vim_status$prompt_color_default "
+  else
+    prompt_line="$prompt_color_Bblack%n$prompt_color_default:$prompt_color_blue%~$prompt_vim_status$prompt_color_default "
+      fi
   PS1="$(print $prompt_line)"
 }
 
