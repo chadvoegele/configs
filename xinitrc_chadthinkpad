@@ -15,5 +15,4 @@ xbacklight -set 50
 source /home/chad/.fehbg
 /home/chad/.dzen/bin/dzen_config.py &
 
-# exec openbox
 exec pekwm
