@@ -18,10 +18,13 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "default"
+let colors_name = "chad"
 
 " my additions
 hi Search        cterm=NONE ctermfg=grey ctermbg=blue
 highlight Folded ctermbg=grey ctermfg=darkgrey
 
 " vim: sw=2
+"
+hi Pmenu   cterm=none ctermfg=black ctermbg=grey
+hi PmenuSel   cterm=bold ctermfg=grey  ctermbg=black
