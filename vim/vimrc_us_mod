@@ -37,6 +37,9 @@ set wildmode=longest,full " completion for :e
 set wildmenu              " completion for :e
 set dictionary+=/usr/share/dict/cracklib-small " dictionary completion
 
+" tags requires ctags
+" set tags+=~/.vim/tags/stl
+
 " ledger stuff
 au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
 let g:ledger_maxwidth = 80
@@ -59,6 +62,18 @@ inoremap <expr> <C-@> pumvisible() ? "\<lt>c-n>" : "\<lt>c-x>\<lt>c-n>\<lt>c-r>=
 " nerd commenter options
 let NERDSpaceDelims=1
 map gn <plug>NERDCommenterToggle
+
+" omnicomplete (replaced with clang-complete for now)
+" let OmniCpp_NamespaceSearch = 1      
+" let OmniCpp_GlobalScopeSearch = 1      
+" let OmniCpp_ShowAccess = 1      
+" let OmniCpp_MayCompleteDot = 1      
+" let OmniCpp_MayCompleteArrow = 1      
+" let OmniCpp_MayCompleteScope = 1      
+" let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+
+" clang_complete options
+let g:clang_close_preview = 1
 
 " surround.vim options
 xmap <Leader>s <Plug>Vsurround
