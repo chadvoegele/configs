@@ -10,7 +10,7 @@
 # Set window geometry (except height)
 Width = 400
 Top = 100
-Left = 1550
+Left = 150
 
 # History size
 History = 256
