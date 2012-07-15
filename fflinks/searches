@@ -1,4 +1,4 @@
 g http://www.google.com/search?hl=en&q=%s&btnG=Google+Search&aq=f&oq=
 w http://www.weather.com/weather/local/%s?whatprefs=&what=WeatherLocalUndeclared&lswe=s&lswa=WeatherLocalUndeclared&from=searchbox_localwx&googleTypeSearch=on&where=%s&Search.x=0&Search.y=0&Search=Search
 l http://www.google.com/search?hl=en&source=hp&q=%s&btnI=I'm+Feeling+Lucky&aq=f&aqi=&aql=&oq=&gs_rfai=
-tv http://tvlistings.zap2it.com/tvlistings/ZCGrid.do?method=decideFwdForLineup&zipcode=%s&setMyPreference=false&lineupId=PC:%s
+tv http://tvlistings.zap2it.com/tvlistings/ZCGrid.do?method=decideFwdForLineup&zipcode=%s&lineupId=IL63451:X
