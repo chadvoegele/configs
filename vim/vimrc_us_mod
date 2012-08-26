@@ -84,9 +84,9 @@ xmap gS <Plug>VSurround
 xmap gs <Plug>Vsurround
 
 " turbo navigation, colemak.vim
-nnoremap <silent> J hhhhh|vnoremap <silent> J hhhhh
-nnoremap <silent> I kkkkk|vnoremap <silent> I kkkkk
-nnoremap <silent> K jjjjj|vnoremap <silent> K jjjjj
+nnoremap <silent> H hhhhh|vnoremap <silent> H hhhhh
+nnoremap <silent> K kkkkk|vnoremap <silent> K kkkkk
+nnoremap <silent> J jjjjj|vnoremap <silent> J jjjjj
 nnoremap <silent> L lllll|vnoremap <silent> L lllll
 
 " home/end of line, colemak.vim
@@ -94,22 +94,8 @@ nnoremap <silent> <expr> <C-j> 0
 nnoremap <C-l> $
 
 " Half page up/down, colemak.vim
-nnoremap <silent> <expr> <C-i> (winheight(0)/2) . "\<C-u>"
-nnoremap <silent> <expr> <C-k> (winheight(0)/2) . "\<C-d>"
-
-" up/down/left/right, colemak.vim
-nnoremap j h|vnoremap j h
-nnoremap i k|vnoremap i k
-nnoremap k j|vnoremap k j
-nnoremap l l|vnoremap l l
-
-" insert/Replace/append/substitute
-nnoremap s i|vnoremap s i
-nnoremap S I|vnoremap S I
-nnoremap h s|vnoremap h s
-nnoremap H S|vnoremap H S
-nnoremap a a|vnoremap a a
-nnoremap A A|vnoremap A A
+nnoremap <silent> <expr> <C-k> (winheight(0)/2) . "\<C-u>"
+nnoremap <silent> <expr> <C-j> (winheight(0)/2) . "\<C-d>"
 
 " key mapping
 nnoremap ; :
