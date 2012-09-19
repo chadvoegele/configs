@@ -42,7 +42,7 @@ bind } history
 
 # h-left, j-down, k-up, l-right, ^d-half page down, ^u-half page up, ^b-full
 # page up, ^f-full page down, 0-line begin, $-line end
-markkeys h=j:j=k:k=i:l=l:^d=K:^u=I:^b=^i:^f=^k:0=J:$=L
+markkeys h=h:j=j:k=k:l=l:^d=J:^u=K:^b=^k:^f=^j:0=H:$=L
 
 # If a window goes unresponsive, don't block the whole session waiting for it.
 nonblock on
