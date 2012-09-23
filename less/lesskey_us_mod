@@ -20,17 +20,17 @@ K         back-scroll       # u is default
 #^U        back-scroll 
 #\40       forw-screen 
 #f         forw-screen 
-^J        forw-screen       #^F is default
 #^V        forw-screen 
 #\kD       forw-screen
 #b         back-screen 
-^K        back-screen       #^B is default
+^k        back-screen       #^B is default
 #\ev       back-screen 
 #\kU       back-screen
 z         forw-window 
 w         back-window 
 #\e\40     forw-screen-force
 F         forw-forever 
+^j        forw-screen       #^F is default
 R         repaint-flush 
 r         repaint 
 ^R        repaint 
