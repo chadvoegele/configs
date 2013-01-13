@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=10000
+SAVEHIST=10000
 
 #word chars
 # by default: export WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>'
@@ -15,6 +15,7 @@ setopt autopushd              # dirs
 setopt PUSHD_IGNORE_DUPS      # ignore duplicates in dir stack
 setopt RM_STAR_WAIT           # pause before confirming rm *
 setopt SHARE_HISTORY          # share history between open shells
+setopt appendhistory          # append new history instead of overwriting
 
 # jump dirs!
 # cdpath=( . ~/jump )
