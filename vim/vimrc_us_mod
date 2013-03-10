@@ -41,7 +41,7 @@ set dictionary+=/usr/share/dict/cracklib-small " dictionary completion
 " set tags+=~/.vim/tags/stl
 
 " ledger stuff
-au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
+au BufNewFile,BufRead chad_ledger*txt setf ledger | comp ledger
 let g:ledger_maxwidth = 80
 let g:ledger_fillstring = '      --      '
 let g:ledger_detailed_first = 1
@@ -174,4 +174,6 @@ vnoremap <silent> gc= :s/\%V.*\%V/\=submatch(0) . "=" . NewCalc(submatch(0))/<CR
 
 " dbtext sqlite3
 let g:dbext_default_profile_c2g_sql_rating = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/inc/class2go_db/exercises/sql/rating.db'
-let g:dbext_default_profile_c2g_sql_social = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/inc/class2go_db/exercises/sql/social.db'
+let g:dbext_default_profile_c2g_sql_social = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_social_net/social.db'
+let g:dbext_default_profile_c2g_sql_socialtrig = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_triggers/social.db'
+let g:dbext_default_profile_c2g_sql_movieview = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_view_modification/movie.db'

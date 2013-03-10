@@ -53,7 +53,7 @@ alias arst='arst.sh'
 alias asdf='asdf.sh'
 alias nc='/usr/bin/netcfg'
 alias o=open_file_or_dir
-alias el='v /home/chad/Dropbox/docs/money/ledger/chad_ledger_2012.ldg'
+alias el='v /home/chad/Dropbox/docs/money/ledger/chad_ledger_2012.txt'
 alias dirs='dirs -v'
 
 # open multiple tabs in vim
