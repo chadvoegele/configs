@@ -177,3 +177,4 @@ let g:dbext_default_profile_c2g_sql_rating = 'type=SQLITE:SQLITE_bin=/usr/bin/sq
 let g:dbext_default_profile_c2g_sql_social = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_social_net/social.db'
 let g:dbext_default_profile_c2g_sql_socialtrig = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_triggers/social.db'
 let g:dbext_default_profile_c2g_sql_movieview = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_view_modification/movie.db'
+let g:dbext_default_profile_c2g_sql_socialtrigchal = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_triggers_challenge/social.db'
