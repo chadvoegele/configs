@@ -37,9 +37,6 @@ set wildmode=longest,full " completion for :e
 set wildmenu              " completion for :e
 set dictionary+=/usr/share/dict/cracklib-small " dictionary completion
 
-" tags requires ctags
-" set tags+=~/.vim/tags/stl
-
 " ledger stuff
 au BufNewFile,BufRead chad_ledger*txt setf ledger | comp ledger
 let g:ledger_maxwidth = 80
@@ -58,22 +55,28 @@ inoremap <expr> <C-N> pumvisible() ? "\<lt>c-n>" : "\<lt>c-n>\<lt>c-r>=pumvisibl
 " remove the longest common text, and finally simlates the "Down" key to keep
 " a matched highlight
 inoremap <expr> <C-@> pumvisible() ? "\<lt>c-n>" : "\<lt>c-x>\<lt>c-n>\<lt>c-r>=pumvisible() ? \"\\<lt>down>\" : \"\"\<lt>cr>"
+set completeopt=menuone,menu,longest,preview
 
 " nerd commenter options
 let NERDSpaceDelims=1
 map gn <plug>NERDCommenterToggle
 
-" omnicomplete (replaced with clang-complete for now)
-" let OmniCpp_NamespaceSearch = 1      
-" let OmniCpp_GlobalScopeSearch = 1      
-" let OmniCpp_ShowAccess = 1      
-" let OmniCpp_MayCompleteDot = 1      
-" let OmniCpp_MayCompleteArrow = 1      
-" let OmniCpp_MayCompleteScope = 1      
-" let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" omnicomplete for cpp
+au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+let OmniCpp_NamespaceSearch = 1      
+let OmniCpp_GlobalScopeSearch = 1      
+let OmniCpp_ShowAccess = 1      
+let OmniCpp_MayCompleteDot = 1      
+let OmniCpp_MayCompleteArrow = 1      
+let OmniCpp_MayCompleteScope = 1      
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+
+" tags requires ctags
+set tags+=~/.vim/tags/stl,~/.vim/tags/boost
 
 " clang_complete options
-let g:clang_close_preview = 1
+" let g:clang_close_preview = 1
 
 " surround.vim options
 xmap <Leader>s <Plug>Vsurround
