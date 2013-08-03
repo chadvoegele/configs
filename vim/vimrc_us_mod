@@ -62,21 +62,25 @@ let NERDSpaceDelims=1
 map gn <plug>NERDCommenterToggle
 
 " omnicomplete for cpp
-au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
-let OmniCpp_NamespaceSearch = 1      
-let OmniCpp_GlobalScopeSearch = 1      
-let OmniCpp_ShowAccess = 1      
-let OmniCpp_MayCompleteDot = 1      
-let OmniCpp_MayCompleteArrow = 1      
-let OmniCpp_MayCompleteScope = 1      
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+" replaced with youcompleteme
+" au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+" let OmniCpp_NamespaceSearch = 1      
+" let OmniCpp_GlobalScopeSearch = 1      
+" let OmniCpp_ShowAccess = 1      
+" let OmniCpp_MayCompleteDot = 1      
+" let OmniCpp_MayCompleteArrow = 1      
+" let OmniCpp_MayCompleteScope = 1      
+" let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 " tags requires ctags
 set tags+=~/.vim/tags/stl,~/.vim/tags/boost
 
 " clang_complete options
 " let g:clang_close_preview = 1
+
+" you complete me options
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " surround.vim options
 xmap <Leader>s <Plug>Vsurround
