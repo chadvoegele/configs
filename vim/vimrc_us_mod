@@ -61,6 +61,9 @@ set completeopt=menuone,menu,longest,preview
 let NERDSpaceDelims=1
 map gn <plug>NERDCommenterToggle
 
+"youcompleteme
+let g:ycm_filetype_whitelist = {"cpp" : 1}
+
 " omnicomplete for cpp
 " replaced with youcompleteme
 " au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
