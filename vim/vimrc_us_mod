@@ -62,7 +62,7 @@ let NERDSpaceDelims=1
 map gn <plug>NERDCommenterToggle
 
 "youcompleteme
-let g:ycm_filetype_whitelist = {"cpp" : 1}
+let g:ycm_filetype_whitelist = {"cpp" : 1, "c" : 1, "h" : 1}
 
 " omnicomplete for cpp
 " replaced with youcompleteme
