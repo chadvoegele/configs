@@ -49,9 +49,6 @@ alias md='mkdir -p'
 alias sudo='sudo ' # this makes sudo use local aliases
 alias s='smart_sudo'
 alias grep='grep -i'
-alias arst='arst.sh'
-alias asdf='asdf.sh'
-alias nc='/usr/bin/netcfg'
 alias o=open_file_or_dir
 alias el='vim -c "set filetype=ledger" /home/chad/Dropbox/docs/money/ledger/chad_ledger_2014.txt'
 alias dirs='dirs -v'
