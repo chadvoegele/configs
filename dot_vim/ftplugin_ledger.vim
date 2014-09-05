@@ -559,7 +559,7 @@ if line("'\"") > 1 && line("'\"") <= line("$")
 endif
 
 iab _td <c-r>=strftime("%Y/%m/%d")<cr>
-iab aclm assets:cur_assets:lilly_checking:my_money
+iab calm chad:assets:lilly_checking:my_money
 
 set commentstring=;%s
 
