@@ -43,7 +43,7 @@
 #  control+shift + q
 
 # set directly keycode (here control + f with my keyboard)
-"urxvt -font -*-terminus-medium-*-*-*-24-*-*-*-*-*-*-* -g 84x31 -e screen"
+"urxvt -font -*-terminus-medium-*-*-*-24-*-*-*-*-*-*-* -g 84x31 -e tmux"
   Mod5 + Return
 "urxvt -font -*-terminus-medium-*-*-*-24-*-*-*-*-*-*-* -g 84x31"
   Shift+Mod5 + Return

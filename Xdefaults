@@ -11,7 +11,7 @@
 URxvt.termName:              rxvt-unicode
 
 ! Black
-*color0:      #5A5A5A
+*color0:      #1c1c1c
 *color8:      #3e3e3e
 ! Red
 *color1:      #C72424
@@ -35,7 +35,6 @@ URxvt.termName:              rxvt-unicode
 *color7:      #D1D1D1
 *color15:     #EDEDED
 
-
 !*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 *font: -*-terminus-medium-*-*-*-24-*-*-*-*-*-*-*
 !*boldFont: -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
@@ -46,7 +45,7 @@ URxvt.termName:              rxvt-unicode
 
 urxvt*scrollBar:            false
 urxvt*background:  #BDBDBD
-!urxvt*foreground:  #cfcfcf
+! urxvt*foreground:  #cfcfcf
 urxvt*cursorColor: #4D4D4D
 urxvt*cursorColor2: #CFCFCF
 urxvt*externallBorder:   0

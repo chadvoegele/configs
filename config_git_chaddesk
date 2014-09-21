@@ -36,3 +36,4 @@ $CONFIG_GIT/pekwm/keys $HOME/.pekwm/keys
 $CONFIG_GIT/pekwm/mouse $HOME/.pekwm/mouse
 $CONFIG_GIT/pekwm/menu $HOME/.pekwm/menu
 $CONFIG_GIT/emacs.d/init.el $HOME/.emacs.d/init.el
+$CONFIG_GIT/tmux.conf $HOME/.tmux.conf
