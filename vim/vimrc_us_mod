@@ -182,6 +182,9 @@ vnoremap <silent> gc<space> :s/\%V.*\%V/\=NewCalc(submatch(0))/<CR>:noh<CR>
 map <silent> gc= :s/.*/\=submatch(0) . "=" . NewCalc(submatch(0))/<CR>:noh<CR>
 vnoremap <silent> gc= :s/\%V.*\%V/\=submatch(0) . "=" . NewCalc(submatch(0))/<CR>:noh<CR>
 
+" slime
+let g:slime_target = "tmux"
+
 " dbtext sqlite3
 let g:dbext_default_profile_c2g_sql_rating = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/inc/class2go_db/exercises/sql/rating.db'
 let g:dbext_default_profile_c2g_sql_social = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_social_net/social.db'
