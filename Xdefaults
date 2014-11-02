@@ -1,39 +1,42 @@
 ! Save this file as ~/.Xdefaults and start a term without any options to
 ! see what it does.
 
-! Use ! for comments (if you don't like a certain setting)
+! Use ! for comments (if you dont like a certain setting)
 
-! The `Xterm' settings work for most terms like aterm, xterm, wterm and rxvt.
+! The Xterm settings work for most terms like aterm, xterm, wterm and rxvt.
 
-! If changing things in this file doesn't result in changes in your term
-! you should run `xrdb -load ~/.Xdefaults'
+! If changing things in this file doesnt result in changes in your term
+! you should run xrdb -load ~/.Xdefaults
+
+! http://crunchbang.org/forums/viewtopic.php?id=9935
+! tartan
 
 URxvt.termName:              rxvt-unicode
 
-! Black
-*color0:      #1c1c1c
-*color8:      #3e3e3e
-! Red
-*color1:      #C72424
-*color9:      #C90808
-! Green
-*color2:      #2F7D19
-*color10:     #16870B
-! Yellow
-*color3:      #16870B
-*color11:     #B0913A
-! Blue
-*color4:      #0042A8
-*color12:     #345D9E
-! Purple
-*color5:      #5F5A90
-*color13:     #826AB1
-! Cyan
-*color6:      #317F99
-*color14:     #0D687A
-! White
-*color7:      #D1D1D1
-*color15:     #EDEDED
+! black
+URxvt*color0  : #2E3436
+URxvt*color8  : #555753
+! red
+URxvt*color1  : #a31604
+URxvt*color9  : #c60001
+! green
+URxvt*color2  : #447241
+URxvt*color10 : #27a343
+! yellow
+URxvt*color3  : #c1951a
+URxvt*color11 : #d5a30e
+! blue
+URxvt*color4  : #425387
+URxvt*color12 : #4a5a8d
+! magenta
+URxvt*color5  : #965d98
+URxvt*color13 : #893c8c
+! cyan
+URxvt*color6  : #06989A
+URxvt*color14 : #12bccb
+! white
+URxvt*color7  : #D3D7CF
+URxvt*color15 : #EEEEEC
 
 !*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 *font: -*-terminus-medium-*-*-*-24-*-*-*-*-*-*-*
@@ -43,9 +46,12 @@ URxvt.termName:              rxvt-unicode
 !urxvt*keysym.0xFFC4:  \033<S-Insert>
 !URxvt.keysym.C-semicolon:   \033<C-;>
 
+URxvt*background: #2B2B2B
+URxvt*foreground: #DEDEDE
+
+URxvt*colorUL: #86a2b0
+
 urxvt*scrollBar:            false
-urxvt*background:  #BDBDBD
-! urxvt*foreground:  #cfcfcf
 urxvt*cursorColor: #4D4D4D
 urxvt*cursorColor2: #CFCFCF
 urxvt*externallBorder:   0
