@@ -26,10 +26,6 @@ $CONFIG_GIT/Xdefaults $HOME/.Xdefaults
 $CONFIG_GIT/xinitrc_chadthinkpad -
 $CONFIG_GIT/xinitrc_chaddesk $HOME/.xinitrc
 $CONFIG_GIT/dot_vim/chad.vim $HOME/.vim/colors/chad.vim
-$CONFIG_GIT/dot_vim/ftplugin_ledger.vim $HOME/.vim/ftplugin/ledger.vim
-$CONFIG_GIT/dot_vim/indent_ledger.vim $HOME/.vim/indent/ledger.vim
-$CONFIG_GIT/dot_vim/syntax_ledger.vim $HOME/.vim/syntax/ledger.vim
-$CONFIG_GIT/dot_vim/compiler_ledger.vim $HOME/.vim/compiler/ledger.vim
 $CONFIG_GIT/ledgerrc $HOME/.ledgerrc
 $CONFIG_GIT/pekwm/config $HOME/.pekwm/config
 $CONFIG_GIT/pekwm/keys $HOME/.pekwm/keys
