@@ -1,2 +1,2 @@
---file /home/chad/Dropbox/docs/money/ledger/chad_ledger_2014.txt
---price-db /home/chad/Dropbox/docs/money/ledger/chad_prices.db
+--file ~/docs/money/ledger/ledger_2014.txt
+--price-db ~/docs/money/ledger/prices.db
