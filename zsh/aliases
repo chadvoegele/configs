@@ -30,6 +30,14 @@ smart_sudo () {
     fi
 }
 
+function get_pass() {
+  if [[ $# -eq 1 ]]; then
+    perl -I ~/docs/passwds ~/docs/passwds/get_pass.pl ~/docs/passwds/keypass.kdb $argv
+  else
+    echo -e "usage: gp pass_regex"
+  fi
+}
+
 #aliases
 alias -g D='&> /dev/null &!'
 alias -g L=' | less'
@@ -51,6 +59,7 @@ alias s='smart_sudo'
 alias grep='grep -i'
 alias o=open_file_or_dir
 alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2015.txt'
+alias gp=get_pass
 alias dirs='dirs -v'
 
 # open multiple tabs in vim
