@@ -13,6 +13,6 @@ xbacklight -set 50
 
 # set up desktop
 source /home/chad/.fehbg
-/home/chad/.dzen/bin/dzen_config.py &
+/usr/bin/status_bar &
 
 exec pekwm
