@@ -31,10 +31,10 @@ smart_sudo () {
 }
 
 function get_pass() {
-  if [[ $# -eq 1 ]]; then
-    perl -I ~/docs/passwds ~/docs/passwds/get_pass.pl ~/docs/passwds/keypass.kdb $argv
-  else
+  if [[ $# -eq 0 || ($# -eq 1 && ${argv[1]} == "-h") ]]; then
     echo -e "usage: gp pass_regex"
+  else
+    perl -I ~/docs/passwds ~/docs/passwds/get_pass.pl ~/docs/passwds/keypass.kdb "$argv"
   fi
 }
 
