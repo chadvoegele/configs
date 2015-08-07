@@ -2,6 +2,8 @@
 monitors=thinkpad_battery;thinkpad_temp;thinkpad_fan;memory;net;dropbox;sp500;weather;clock
 fgcolor=#444444
 bgcolor=#e0e0e0
+alert_fgcolor=#ffffff
+alert_bgcolor=#90001f
 width=1280
 font_size=14
 one_char_width=9

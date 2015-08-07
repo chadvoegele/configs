@@ -22,8 +22,7 @@ let colors_name = "chad"
 
 " my additions
 hi Search        cterm=NONE ctermfg=grey ctermbg=blue
-highlight Folded ctermbg=darkgrey ctermfg=grey
-highlight Visual ctermbg=darkgrey ctermfg=grey
+highlight Folded ctermbg=grey ctermfg=darkgrey
 
 " vim: sw=2
 "
