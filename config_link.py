@@ -1,11 +1,6 @@
 #!/usr/bin/env python
 import os, sys, argparse
 
-def links_to_ignore():
-  # relative to $HOME
-  links = [".k", "docs"]
-  return links
-
 def dirs_to_check_for_dead_links():
   # relative to $HOME
   # (dir, recursive_find?)
@@ -48,32 +43,36 @@ def parse_args():
   return args
 
 def clean_links(verbose, force, home):
-  ignore_links = [os.path.join(home, link) for link in links_to_ignore()]
-
   dirs = dirs_to_check_for_dead_links()
 
   for (direc, recursive) in dirs:
     direc = os.path.join(home, direc)
     if recursive:
-        clean_links_recurse(verbose, force, direc, ignore_links)
+        clean_links_recurse(verbose, force, direc)
     else:
-        clean_links_no_recurse(verbose, force, direc, ignore_links)
+        clean_links_no_recurse(verbose, force, direc)
 
-def clean_links_recurse(verbose, force, direc, ignore_links):
+def clean_links_recurse(verbose, force, direc):
   for root, sub_folder, files in os.walk(direc):
     for f in files:
       f = os.path.join(root, f)
-      if f not in ignore_links:
-        remove_if_dead_link(verbose, force, f, ignore_links)
+      remove_if_dead_link(verbose, force, f)
 
-def clean_links_no_recurse(verbose, force, direc, ignore_links):
+def clean_links_no_recurse(verbose, force, direc):
   files = os.listdir(direc)
   for f in files:
     f = os.path.join(direc, f)
-    remove_if_dead_link(verbose, force, f, ignore_links)
+    remove_if_dead_link(verbose, force, f)
 
-def remove_if_dead_link(verbose, force, link, ignore_links):
-  if link not in ignore_links and os.path.islink(link) and not os.path.exists(os.readlink(link)):
+def remove_if_dead_link(verbose, force, link):
+  if not os.path.islink(link):
+    return
+
+  link_dest = os.readlink(link)
+  if not os.path.isabs(link_dest):
+    link_dest = os.path.join(os.path.dirname(link), link_dest)
+
+  if not os.path.exists(link_dest):
     if verbose:
       print("Removing dead link: " + link)
     if force:
