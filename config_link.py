@@ -48,9 +48,9 @@ def clean_links(verbose, force, home):
   for (direc, recursive) in dirs:
     direc = os.path.join(home, direc)
     if recursive:
-        clean_links_recurse(verbose, force, direc)
+      clean_links_recurse(verbose, force, direc)
     else:
-        clean_links_no_recurse(verbose, force, direc)
+      clean_links_no_recurse(verbose, force, direc)
 
 def clean_links_recurse(verbose, force, direc):
   for root, sub_folder, files in os.walk(direc):
@@ -100,12 +100,12 @@ def main():
   args = parse_args()
 
   if args.clean:
-      clean_links(args.verbose, args.force, args.home)
+    clean_links(args.verbose, args.force, args.home)
 
   makelinks(args.verbose, args.force, args.home, os.path.join(args.git_dir, "any"))
 
   if os.path.exists(args.hostname):
-      makelinks(args.verbose, args.force, args.home, os.path.join(args.git_dir, args.hostname))
+    makelinks(args.verbose, args.force, args.home, os.path.join(args.git_dir, args.hostname))
 
 if __name__ == "__main__":
   main()
