@@ -103,7 +103,9 @@ def main():
       clean_links(args.verbose, args.force, args.home)
 
   makelinks(args.verbose, args.force, args.home, os.path.join(args.git_dir, "any"))
-  makelinks(args.verbose, args.force, args.home, os.path.join(args.git_dir, args.hostname))
+
+  if os.path.exists(args.hostname):
+      makelinks(args.verbose, args.force, args.home, os.path.join(args.git_dir, args.hostname))
 
 if __name__ == "__main__":
   main()
