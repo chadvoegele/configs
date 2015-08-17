@@ -92,7 +92,7 @@ def makelinks(verbose, force, home, direc):
             os.remove(link_dest)
 
         if verbose:
-          print("Making: " + link_src + " -> " + link_dest)
+          print("Making: " + link_dest + " -> " + link_src)
         if force:
           os.symlink(link_src, link_dest)
 
