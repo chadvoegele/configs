@@ -3,7 +3,6 @@
 setxkbmap us_mod -option ctrl:nocaps
 xset r rate 250 20
 xbindkeys &
-numlockx
 
 # no bell
 xset b off
@@ -12,10 +11,7 @@ xset b off
 xset dpms 0 0 180
 xrandr -s 1920x1200
 
-sleep .3s
-/home/chad/.dzen/bin/dzen_config.py &
 source /home/chad/.config/feh/fehbg
-
-# DISPLAY=:0.1 openbox &
+/usr/bin/status_bar &
 
 exec pekwm
