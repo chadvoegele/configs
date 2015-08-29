@@ -8,6 +8,7 @@ set autoindent
 
 " Change colorscheme from default to delek
 colorscheme chad
+autocmd FileType todo highlight Todo cterm=NONE ctermfg=grey ctermbg=grey
 
 " searching
 set ignorecase 
@@ -78,7 +79,7 @@ let g:ycm_filetype_whitelist = {"cpp" : 1, "c" : 1, "h" : 1}
 " let OmniCpp_MayCompleteScope = 1      
 " let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-
+"
 " tags requires ctags
 set tags+=~/.vim/tags/stl,~/.vim/tags/boost
 
