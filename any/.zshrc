@@ -29,6 +29,7 @@ fi
 
 # prompt
 . ~/.config/zsh/prompt
+unset zle_bracketed_paste     # paste as if typing, must go after prompt
 
 # titles
 . ~/.config/zsh/titles
