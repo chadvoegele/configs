@@ -83,6 +83,7 @@ def makelinks(verbose, force, home, direc):
     for f in files:
       link_src = os.path.join(root, f)
       link_dest = os.path.join(home, os.path.relpath(link_src, direc))
+      link_dest_dirname = os.path.dirname(link_dest)
 
       if not (os.path.islink(link_dest) and os.readlink(link_dest) == link_src):
         if os.path.isfile(link_dest) or (os.path.islink(link_dest) and not os.readlink(link_dest) == link_src):
@@ -90,6 +91,12 @@ def makelinks(verbose, force, home, direc):
             print("Removing: " + link_dest)
           if force:
             os.remove(link_dest)
+
+        if not os.path.exists(link_dest_dirname):
+            if verbose:
+              print("Adding directory: " + link_dest_dirname)
+            if force:
+                os.makedirs(link_dest_dirname)
 
         if verbose:
           print("Making: " + link_dest + " -> " + link_src)
