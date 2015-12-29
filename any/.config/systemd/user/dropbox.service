@@ -1,0 +1,10 @@
+[Unit]
+Description=Dropbox as a systemd service
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/dropbox
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=default.target
