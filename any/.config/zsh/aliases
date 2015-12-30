@@ -61,6 +61,7 @@ alias o=open_file_or_dir
 alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2015.txt'
 alias gp=get_pass
 alias dirs='dirs -v'
+alias g='open_firefox.py'
 
 # open multiple tabs in vim
 alias vim='vim -p'
