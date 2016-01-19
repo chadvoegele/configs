@@ -58,7 +58,7 @@ alias sudo='sudo ' # this makes sudo use local aliases
 alias s='smart_sudo'
 alias grep='grep -i'
 alias o=open_file_or_dir
-alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2015.txt'
+alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2016.txt'
 alias gp=get_pass
 alias dirs='dirs -v'
 alias g='open_firefox.py'
