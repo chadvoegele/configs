@@ -1,6 +1,6 @@
 #!/bin/sh
 # keyboard
-setxkbmap us_mod -option ctrl:nocaps
+setxkbmap us_prog -option ctrl:nocaps
 xset r rate 250 20
 xbindkeys &
 

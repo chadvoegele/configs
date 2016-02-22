@@ -52,7 +52,7 @@ if [ -z "$DE" ] || ! [[ $PATH =~ "/home/chad/bin" ]]; then
   DE="generic"
   EDITOR="vim"
   PRINTER="HP_LaserJet_1022"
-  BROWSER="google-chrome"
+  BROWSER="chromium"
   typeset -U path
   path=(~/bin $path)
   export DE EDITOR PRINTER BROWSER

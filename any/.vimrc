@@ -49,6 +49,9 @@ let g:ledger_include_original = 0
 nnoremap <silent> glc :call ledger#transaction_state_toggle(line('.'), '* ')<CR>
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
+" NERDTree Config
+let g:NERDTreeWinSize = 20
+
 " completion menu
 " set completeopt=menuone
 " <CR> will simply select the highlighted menu item just as C-Y does
@@ -188,6 +191,7 @@ vnoremap <silent> gc= :s/\%V.*\%V/\=submatch(0) . "=" . NewCalc(submatch(0))/<CR
 
 " slime
 let g:slime_target = "tmux"
+let g:slime_python_ipython = 1
 
 " dbtext sqlite3
 let g:dbext_default_profile_c2g_sql_rating = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/inc/class2go_db/exercises/sql/rating.db'
