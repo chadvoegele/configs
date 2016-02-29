@@ -7,7 +7,6 @@ rationalise-dot() {
  fi
 }
 zle -N rationalise-dot
-bindkey . rationalise-dot
 
 # two functions below could be simplified by passing in $cmd
 turbo_left() {
@@ -44,6 +43,7 @@ bindkey -M viins "^n" down-line-or-history
 bindkey -M viins "^p" up-line-or-history
 bindkey -M viins "^r" history-incremental-search-backward
 bindkey -M viins "^s" history-incremental-search-forward
+bindkey . rationalise-dot
 
 # my cheap way of ignoring emacs bindings but keeping them for later
 if [ ]; then
