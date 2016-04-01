@@ -1,17 +1,7 @@
 #!/bin/sh
-# keyboard
-setxkbmap us_prog -option ctrl:nocaps
-xset r rate 250 20
+source x_settings.sh
 xbindkeys &
 
-# no bell
-xset b off
-
-# screen settings
-xset dpms 0 0 60
-xbacklight -set 50
-
-# set up desktop
 source /home/chad/.fehbg
 /usr/bin/status_bar &
 

@@ -6,6 +6,7 @@ INCLUDE = "vars"
 RootMenu = "Pekwm" {
 	Entry = "Terminal" { Actions = "Exec urxvt &" }
 	Entry = "Run.." { Actions = "Exec gmrun &" }
+	Entry = "Setup X" { Actions = "Exec x_settings.sh &" }
 
 	Separator {}
 
