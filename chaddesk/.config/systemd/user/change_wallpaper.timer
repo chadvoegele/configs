@@ -1,0 +1,10 @@
+[Unit]
+Description=Run change wallpapers hourly
+After=xorg.target
+
+[Timer]
+OnBootSec=30s
+OnUnitInactiveSec=1h
+
+[Install]
+WantedBy=timers.target
