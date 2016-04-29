@@ -23,7 +23,6 @@ set bdir=~/.vim/backup  " keep backups in one place
 set virtualedit=block   " allow virtual editing in Visual block mode
 set numberwidth=1       " minimum num of cols to reserve for line numbers
 set nobackup            " disable backup files (filename~)
-set textwidth=80        " insert carriage return after n cols wide
 set expandtab           " insert spaces instead of tabs
 set tabstop=2           " n space tab width
 set softtabstop=2       " delete 2 spaces as tabs
@@ -132,10 +131,6 @@ inoremap <C-d> <C-o>x
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 
-" space, return in normal mode enter spaces, returns
-nnoremap <Space> i<Space><Esc><Right>
-nnoremap <Return> i<Return><Esc>
-
 " spell check
 nnoremap gs z=
 
@@ -192,6 +187,7 @@ vnoremap <silent> gc= :s/\%V.*\%V/\=submatch(0) . "=" . NewCalc(submatch(0))/<CR
 " slime
 let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
+let g:slime_paste_file = "/tmp/slime"
 
 " dbtext sqlite3
 let g:dbext_default_profile_c2g_sql_rating = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/inc/class2go_db/exercises/sql/rating.db'
