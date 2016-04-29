@@ -5,4 +5,4 @@ xbindkeys &
 source /home/chad/.fehbg
 /usr/bin/status_bar &
 
-exec pekwm
+exec openbox
