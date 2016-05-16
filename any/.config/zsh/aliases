@@ -58,3 +58,4 @@ alias o=open_file_or_dir
 alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2016.txt'
 alias gp=get_pass
 alias g='open_firefox.py'
+alias v='vim'
