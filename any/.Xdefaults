@@ -1,13 +1,3 @@
-! Save this file as ~/.Xdefaults and start a term without any options to
-! see what it does.
-
-! Use ! for comments (if you don't like a certain setting)
-
-! The `Xterm' settings work for most terms like aterm, xterm, wterm and rxvt.
-
-! If changing things in this file doesn't result in changes in your term
-! you should run `xrdb -load ~/.Xdefaults'
-
 URxvt.termName:              rxvt-unicode
 
 ! Black
@@ -35,31 +25,17 @@ URxvt.termName:              rxvt-unicode
 *color7:      #D1D1D1
 *color15:     #EDEDED
 
-!*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 *font: -*-terminus-medium-*-*-*-24-*-*-*-*-*-*-*
-!*boldFont: -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
 *boldFont: -*-terminus-bold-*-*-*-24-*-*-*-*-*-*-*
 
-!urxvt*keysym.0xFFC4:  \033<S-Insert>
-!URxvt.keysym.C-semicolon:   \033<C-;>
-
-urxvt*scrollBar:            false
+urxvt*scrollBar:   false
 urxvt*background:  #BDBDBD
-! urxvt*foreground:  #cfcfcf
 urxvt*cursorColor: #4D4D4D
 urxvt*cursorColor2: #CFCFCF
 urxvt*externallBorder:   0
 URxvt*internalBorder:    0
-urxvt.mouseWheelScrollPage:   true
-urxvt*iconName:			rxvt-unicode.png
+
 ! used to be \033. see ascii character control codes
 ! now this will just enter a ^^ and then the shell will take care of it
 ! the \033 enters an escape and this is no good for vim in zsh
 URxvt.keysym.C-period:  \036
-
-
-! MRXVT
-mrxvt*vt0*command: /usr/bin/zsh -ls
-
-<Btn4Down>,<Btn4Up>:scroll-back(1,line)\n\
-<Btn5Down>,<Btn5Up>:scroll-forw(1,line)\n\

@@ -1,36 +1,22 @@
-#command
 \r        forw-line 
 \n        forw-line 
-e         forw-line         # e is default
+e         forw-line
 j         forw-line 
 \kd       forw-line
 ^E        forw-line 
 ^N        forw-line 
 y         back-line 
 ^Y        back-line 
-#^K        back-line 
 ^P        back-line 
-k         back-line         # i is default      
-#J         forw-line-force 
-#K         back-line-force 
+k         back-line
 Y         back-line-force 
-J         forw-scroll       # d is default
-#^D        forw-scroll 
-K         back-scroll       # u is default
-#^U        back-scroll 
-#\40       forw-screen 
-#f         forw-screen 
-#^V        forw-screen 
-#\kD       forw-screen
-#b         back-screen 
-^k        back-screen       #^B is default
-#\ev       back-screen 
-#\kU       back-screen
+J         forw-scroll
+K         back-scroll
+^k        back-screen
 z         forw-window 
 w         back-window 
-#\e\40     forw-screen-force
 F         forw-forever 
-^j        forw-screen       #^F is default
+^j        forw-screen
 R         repaint-flush 
 r         repaint 
 ^R        repaint 

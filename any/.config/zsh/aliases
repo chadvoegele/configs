@@ -40,9 +40,6 @@ function get_pass() {
 
 #aliases
 alias -g D='&> /dev/null &!'
-alias -g L=' | less'
-
-alias -s pdf=evince
 
 alias ls='ls --color=auto'
 alias l='ls --color=auto'
@@ -60,22 +57,4 @@ alias grep='grep -i'
 alias o=open_file_or_dir
 alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2016.txt'
 alias gp=get_pass
-alias dirs='dirs -v'
 alias g='open_firefox.py'
-
-# open multiple tabs in vim
-alias vim='vim -p'
-alias v='vim -p'
-
-#mkdir cd
-mdcd() { mkdir -p "$1" && cd "$1" }
-
-#mv cd
-mvcd() { mv -i "$1" "$2" && cd "$2" }
-
-#cp cd
-cpcd() { cp -i "$1" "$2" && cd "$2" }
-
-#scp resume
-alias scpresume='rsync -partial -progress --rsh=ssh'
-

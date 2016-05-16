@@ -29,7 +29,6 @@ bindkey -M vicmd L turbo_right
 bindkey -M vicmd k vi-up-line-or-history
 bindkey -M vicmd j vi-down-line-or-history
 bindkey -M vicmd i vi-insert
-bindkey -M viins '^[' vi-cmd-mode
 bindkey -M viins '^^' insert-last-word 
 bindkey -M viins '^h' backward-delete-char
 bindkey -M viins '^w' backward-kill-word
@@ -45,52 +44,12 @@ bindkey -M viins "^r" history-incremental-search-backward
 bindkey -M viins "^s" history-incremental-search-forward
 bindkey . rationalise-dot
 
-# my cheap way of ignoring emacs bindings but keeping them for later
-if [ ]; then
-  bindkey -e
-  bindkey "\e[1~" beginning-of-line
-  bindkey "\e[4~" end-of-line
-  bindkey "\e[5~" beginning-of-history
-  bindkey "\e[6~" end-of-history
-  bindkey "\e[3~" delete-char
-  bindkey "\e[2~" quoted-insert
-  bindkey "\e[5C" forward-word
-  bindkey "\eOc" emacs-forward-word
-  bindkey "\e[5D" backward-word
-  bindkey "\eOd" emacs-backward-word
-  bindkey "\e\e[C" forward-word
-  bindkey "\e\e[D" backward-word
-  bindkey "^H" backward-delete-char
-  # for rxvt
-  bindkey "\e[8~" end-of-line
-  bindkey "\e[7~" beginning-of-line
-  # for non RH/Debian xterm, can't hurt for RH/DEbian xterm
-  bindkey "\eOH" beginning-of-line
-  bindkey "\eOF" end-of-line
-  # for freebsd console
-  bindkey "\e[H" beginning-of-line
-  bindkey "\e[F" end-of-line
-  # completion in the middle of a line
-  bindkey '^i' expand-or-complete-prefix
-  bindkey '^v' accept-line
-
-  #my bindings
-  bindkey '^g' emacs-forward-word
-  bindkey '^k' emacs-backward-word
-  bindkey "^Y" yank
-  bindkey "^[^Y" yank-pop      ##ctrl-alt y
-  bindkey "^[^M" set-mark-command
-  bindkey "^[^K" kill-region
-  bindkey "^ " expand-or-complete-prefix
-  bindkey '^.' insert-last-word # needs map in .Xdefaults
-  bindkey "^n" down-line-or-history
-fi
-
-# key bindings
-# bindkey -r "^s"
 bindkey -r "^q"
 
 # remove delay using escape to enter command mode
 bindkey -rpM viins '\e'
 bindkey -rpM viins '^['
 KEYTIMEOUT=10
+
+bindkey -M viins "^[[D" backward-char
+bindkey -M viins "^[[C" forward-char

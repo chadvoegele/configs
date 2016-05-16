@@ -51,45 +51,14 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
 " NERDTree Config
 let g:NERDTreeWinSize = 20
 
-" completion menu
-" set completeopt=menuone
-" <CR> will simply select the highlighted menu item just as C-Y does
-inoremap <expr> <CR> pumvisible() ? "\<c-y>" : "\<c-g>u\<CR>"
-" When the autocomplete menu is up, make C-N simulate the "Down" key
-inoremap <expr> <C-N> pumvisible() ? "\<lt>c-n>" : "\<lt>c-n>\<lt>c-r>=pumvisible() ? \"\\<lt>down>\" : \"\"\<lt>cr>"
-" Make C-Space bring up the <C-N> completion menu, then simulate C-N C-P to
-" remove the longest common text, and finally simlates the "Down" key to keep
-" a matched highlight
-inoremap <expr> <C-@> pumvisible() ? "\<lt>c-n>" : "\<lt>c-x>\<lt>c-n>\<lt>c-r>=pumvisible() ? \"\\<lt>down>\" : \"\"\<lt>cr>"
 set completeopt=menuone,menu,longest,preview
 
 " nerd commenter options
 let NERDSpaceDelims=1
 map gn <plug>NERDCommenterToggle
 
-"youcompleteme
-let g:ycm_filetype_whitelist = {"cpp" : 1, "c" : 1, "h" : 1}
-
-" omnicomplete for cpp
-" replaced with youcompleteme
-" au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
-" let OmniCpp_NamespaceSearch = 1      
-" let OmniCpp_GlobalScopeSearch = 1      
-" let OmniCpp_ShowAccess = 1      
-" let OmniCpp_MayCompleteDot = 1      
-" let OmniCpp_MayCompleteArrow = 1      
-" let OmniCpp_MayCompleteScope = 1      
-" let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-" au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-"
 " tags requires ctags
 set tags+=~/.vim/tags/stl,~/.vim/tags/boost
-
-" clang_complete options
-" let g:clang_close_preview = 1
-
-" you complete me options
-let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " surround.vim options
 xmap <Leader>s <Plug>Vsurround
@@ -188,10 +157,3 @@ vnoremap <silent> gc= :s/\%V.*\%V/\=submatch(0) . "=" . NewCalc(submatch(0))/<CR
 let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
 let g:slime_paste_file = "/tmp/slime"
-
-" dbtext sqlite3
-let g:dbext_default_profile_c2g_sql_rating = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/inc/class2go_db/exercises/sql/rating.db'
-let g:dbext_default_profile_c2g_sql_social = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_social_net/social.db'
-let g:dbext_default_profile_c2g_sql_socialtrig = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_triggers/social.db'
-let g:dbext_default_profile_c2g_sql_movieview = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_view_modification/movie.db'
-let g:dbext_default_profile_c2g_sql_socialtrigchal = 'type=SQLITE:SQLITE_bin=/usr/bin/sqlite3:dbname=/home/chad/docs/edu/class2go_database/exercises/sql_triggers_challenge/social.db'

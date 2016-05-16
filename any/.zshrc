@@ -17,9 +17,6 @@ setopt RM_STAR_WAIT           # pause before confirming rm *
 setopt SHARE_HISTORY          # share history between open shells
 setopt appendhistory          # append new history instead of overwriting
 
-# jump dirs!
-# cdpath=( . ~/jump )
-
 # ~/bin/zsh scripts
 if [[ -d ~/bin/zsh ]] && [[ ! -z `ls ~/bin/zsh` ]]; then
   for file in ~/bin/zsh/*; do
@@ -42,9 +39,6 @@ unset zle_bracketed_paste     # paste as if typing, must go after prompt
 
 # aliases
 . ~/.config/zsh/aliases
-
-#local settings
-[[ -f ~/.zsh_localrc ]] && .  ~/.zsh_localrc
 
 # set environment vars if they are not set
 if [ -z "$DE" ] || ! [[ $PATH =~ "/home/chad/bin" ]]; then
