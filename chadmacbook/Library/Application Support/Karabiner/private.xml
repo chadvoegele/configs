@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<root>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_StartiTerm</name>
+    <url>file:///Applications/StartiTerm.app</url>
+  </vkopenurldef>
+
+  <item>
+    <name>Start iTerm</name>
+    <identifier>private.start_iterm</identifier>
+    <autogen>__KeyToKey__ KeyCode::RETURN, ModifierFlag::COMMAND_L, KeyCode::VK_OPEN_URL_StartiTerm</autogen>
+  </item>
+
+  <item>
+    <name>Swap Command_L with Option_L for iTerm</name>
+    <identifier>private.remap.app_iterm_commandtooption</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+    <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+    <autogen>__KeyToKey__ KeyCode::TAB, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION, KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION, KeyCode::Q, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::SPACE, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::SPACE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION, KeyCode::SPACE</autogen>
+  </item>
+
+  <item>
+    <name>Swap Command_L with Option_L for VNC</name>
+    <identifier>private.remap.app_vnc_commandtooption</identifier>
+    <only>VNC</only>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+    <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+  </item>
+</root>
