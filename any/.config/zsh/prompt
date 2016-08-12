@@ -25,7 +25,8 @@ prompt_chad_precmd () {
   prompt_color_black='%{\e[0;30m%}' #bold black
   prompt_color_default='%{\e[0m%}'   #default
   prompt_color_blue='%{\e[0;34m%}'   #blue
-  prompt_color_Bred='%{\e[1;31m%}'   #blue
+  prompt_color_Bred='%{\e[1;31m%}'   #bold red
+  prompt_color_magenta='%{\e[0;35m%}'   #magenta
 
   prompt_normal_mode="||"
   prompt_insert_mode=$prompt_color_Bred">>"
@@ -36,10 +37,19 @@ prompt_chad_precmd () {
   fi
 
   if [ ! -z $SSH_CONNECTION ]; then
-    prompt_line="$prompt_color_Bblack%n$prompt_color_black@%m$prompt_color_default:$prompt_color_blue%~$prompt_vim_status$prompt_color_default "
+    prompt_ssh_conn="$prompt_color_black@%m"
   else
-    prompt_line="$prompt_color_Bblack%n$prompt_color_default:$prompt_color_blue%~$prompt_vim_status$prompt_color_default "
-      fi
+    prompt_ssh_conn=""
+  fi
+
+  if [ ! -z $DOCKER_CERT_PATH ]; then
+    machine="${DOCKER_CERT_PATH##*/}"
+    prompt_docker_machine="$prompt_color_magenta(${machine})$prompt_color_default"
+  else
+    prompt_docker_machine=""
+  fi
+
+  prompt_line="$prompt_color_Bblack%n$prompt_ssh_conn$prompt_docker_machine$prompt_color_default:$prompt_color_blue%~$prompt_vim_status$prompt_color_default "
   PS1="$(print $prompt_line)"
 }
 
