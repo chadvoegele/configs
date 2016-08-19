@@ -54,6 +54,7 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
 " NERDTree Config
 let g:NERDTreeWinSize = 20
 
+autocmd CompleteDone * pclose
 set completeopt=menuone,menu,longest,preview
 
 " nerd commenter options
@@ -109,6 +110,10 @@ nnoremap gs z=
 " undo/redo
 nnoremap U <C-r>
 nnoremap u u
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
 
 " code folding
 nnoremap go zo " open fold under cursor
