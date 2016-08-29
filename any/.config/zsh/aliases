@@ -50,8 +50,13 @@ if (( ! ${+CD_MAP} )); then
   return 1
 fi
 
-if [[ $# -ne 1 ]]; then
+if [[ $# -gt 1 || $# -eq 1 && (${argv[1]} == "-h" || ${argv[1]} == "--help") ]]; then
   echo "Usage: quick_cd [directory abbreivation]"
+  return 1
+fi
+
+if [[ $# -eq 0 ]]; then
+  cd
   return 1
 fi
 
