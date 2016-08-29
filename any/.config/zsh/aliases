@@ -87,3 +87,4 @@ alias qc=quick_cd
 alias g='open_firefox.py'
 alias v='vim'
 alias dm=docker-machine
+alias sh=screensaver_hold.sh
