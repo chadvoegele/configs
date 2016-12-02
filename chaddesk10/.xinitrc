@@ -14,4 +14,4 @@ xrandr -s 1920x1200
 source /home/chad/.config/feh/fehbg
 /usr/bin/status_bar &
 
-exec pekwm
+exec openbox
