@@ -182,7 +182,7 @@
   </keybind>
 
   <keybind key="Alt-k">
-    <action name="GrowToFill">
+    <action name="ToggleMaximize">
     </action>
   </keybind>
 </keyboard>
