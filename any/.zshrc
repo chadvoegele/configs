@@ -50,6 +50,7 @@ if [ -z "$DE" ] || ! [[ $PATH =~ "/home/chad/bin" ]]; then
   typeset -U path
   path=(~/bin $path)
   export DE EDITOR PRINTER BROWSER
+  export PASSWORD_STORE_DIR="${HOME}/Dropbox/docs/passwords"
 fi
 
 # Start X if it is vc1 and X hasn't been started already
@@ -66,4 +67,10 @@ else
         source ~/.ssh/ssh-agent.sh >/dev/null
     fi
   fi
+
+  # Set GPG TTY
+  export GPG_TTY=$(tty)
+
+  # Refresh gpg-agent tty in case user switches into an X session
+  gpg-connect-agent updatestartuptty /bye >/dev/null
 fi

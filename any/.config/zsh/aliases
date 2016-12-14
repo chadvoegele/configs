@@ -30,14 +30,6 @@ smart_sudo () {
     fi
 }
 
-function get_pass() {
-  if [[ $# -eq 0 || ($# -eq 1 && ${argv[1]} == "-h") ]]; then
-    echo -e "usage: gp pass_regex"
-  else
-    perl -I ~/docs/passwds ~/docs/passwds/get_pass.pl ~/docs/passwds/keypass.kdb "$argv"
-  fi
-}
-
 function docker-machine() {
   docker_machine.sh $1 | source /dev/stdin
 }
@@ -87,7 +79,6 @@ alias s='smart_sudo'
 alias grep='grep -i'
 alias o=open_file_or_dir
 alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2016.txt'
-alias gp=get_pass
 alias qc=quick_cd
 alias g='open_firefox.py'
 alias v='vim'
