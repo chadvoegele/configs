@@ -4,3 +4,7 @@
   Shift+Mod5 + Return
 "gmrun"
   Alt + space
+"amixer sset 'Master' 7+"
+  Mod2+Mod5 + Right
+"amixer sset 'Master' 7-"
+  Mod2+Mod5 + Left

@@ -9,7 +9,7 @@
   Mod2+Mod5 + Up
 "mpc next"
   Mod2+Mod5 + Down
-"amixer sset 'Master' 7%+"
+"amixer sset 'Master' 7+"
   Mod2+Mod5 + Right
-"amixer sset 'Master' 7%-"
+"amixer sset 'Master' 7-"
   Mod2+Mod5 + Left
