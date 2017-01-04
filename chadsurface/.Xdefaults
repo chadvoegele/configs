@@ -1,0 +1,41 @@
+URxvt.termName:              rxvt-unicode
+
+! Black
+*color0:      #1c1c1c
+*color8:      #3e3e3e
+! Red
+*color1:      #C72424
+*color9:      #C90808
+! Green
+*color2:      #2F7D19
+*color10:     #16870B
+! Yellow
+*color3:      #16870B
+*color11:     #B0913A
+! Blue
+*color4:      #0042A8
+*color12:     #345D9E
+! Purple
+*color5:      #5F5A90
+*color13:     #826AB1
+! Cyan
+*color6:      #317F99
+*color14:     #0D687A
+! White
+*color7:      #D1D1D1
+*color15:     #EDEDED
+
+*font: -*-terminus-medium-*-*-*-32-*-*-*-*-*-*-*
+*boldFont: -*-terminus-bold-*-*-*-32-*-*-*-*-*-*-*
+
+urxvt*scrollBar:   false
+urxvt*background:  #BDBDBD
+urxvt*cursorColor: #4D4D4D
+urxvt*cursorColor2: #CFCFCF
+urxvt*externallBorder:   0
+URxvt*internalBorder:    0
+
+! used to be \033. see ascii character control codes
+! now this will just enter a ^^ and then the shell will take care of it
+! the \033 enters an escape and this is no good for vim in zsh
+URxvt.keysym.C-period:  \036
