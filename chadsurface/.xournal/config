@@ -5,9 +5,9 @@
 
 [general]
 # the display resolution, in pixels per inch
-display_dpi=96.00
+display_dpi=192.00
 # the initial zoom level, in percent
-initial_zoom=231.62
+initial_zoom=115
 # maximize the window at startup (true/false)
 window_maximize=true
 # start in full screen mode (true/false)
@@ -64,7 +64,7 @@ interface_order=menu main_toolbar pen_toolbar drawarea statusbar
 # interface components in fullscreen mode, from top to bottom
 interface_fullscreen=main_toolbar pen_toolbar drawarea
 # interface has left-handed scrollbar (true/false)
-interface_lefthanded=false
+interface_lefthanded=true
 # hide some unwanted menu or toolbar items (true/false)
 shorten_menus=false
 # interface items to hide (customize at your own risk!)
