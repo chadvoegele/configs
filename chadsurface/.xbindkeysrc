@@ -1,0 +1,13 @@
+# set directly keycode (here control + f with my keyboard)
+"urxvt -font -*-terminus-medium-*-*-*-32-*-*-*-*-*-*-* -g 119x20 -e tmux"
+  Mod2+Mod5 + Return
+"urxvt -font -*-terminus-medium-*-*-*-32-*-*-*-*-*-*-* -g 119x20"
+  Shift+Mod2+Mod5 + Return
+"gmrun"
+  Alt + space
+"cycle_window.sh"
+  XF86AudioRaiseVolume
+"skippy-xd --toggle-window-picker"
+  XF86AudioLowerVolume
+"onboard"
+  Alt + XF86AudioLowerVolume
