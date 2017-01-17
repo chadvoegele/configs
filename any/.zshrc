@@ -55,7 +55,7 @@ fi
 
 # Start X if it is vc1 and X hasn't been started already
 if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
-  startx -- -dpi 96 vt1
+  startx -- -dpi 192 -ardelay 250 -arinterval 20 vt1
 logout
 else
   if [ -z "$SSH_AUTH_SOCK" ] || [ ! -w "$SSH_AUTH_SOCK" ]; then
