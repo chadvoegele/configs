@@ -91,6 +91,10 @@ nnoremap <C-s> :w<cr>
 inoremap <C-q> <esc>:q<cr>
 nnoremap <C-q> :q<cr>
 
+inoremap <C-_> <esc>
+nnoremap <C-_> <esc>
+vnoremap <C-_> <esc>
+
 " emacs keys in insert mode
 inoremap <C-p> <C-o>k
 inoremap <C-n> <C-o>j

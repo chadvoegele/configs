@@ -42,6 +42,7 @@ bindkey -M viins "^n" down-line-or-history
 bindkey -M viins "^p" up-line-or-history
 bindkey -M viins "^r" history-incremental-search-backward
 bindkey -M viins "^s" history-incremental-search-forward
+bindkey -M viins "^_" vi-cmd-mode
 bindkey . rationalise-dot
 
 bindkey -r "^q"
