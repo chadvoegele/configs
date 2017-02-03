@@ -30,12 +30,8 @@ smart_sudo () {
     fi
 }
 
-function get_pass() {
-  if [[ $# -eq 0 || ($# -eq 1 && ${argv[1]} == "-h") ]]; then
-    echo -e "usage: gp pass_regex"
-  else
-    perl -I ~/docs/passwds ~/docs/passwds/get_pass.pl ~/docs/passwds/keypass.kdb "$argv"
-  fi
+function docker-machine() {
+  docker_machine.sh $1 | source /dev/stdin
 }
 
 function quick_cd() {
@@ -46,8 +42,13 @@ if (( ! ${+CD_MAP} )); then
   return 1
 fi
 
-if [[ $# -ne 1 ]]; then
+if [[ $# -gt 1 || $# -eq 1 && (${argv[1]} == "-h" || ${argv[1]} == "--help") ]]; then
   echo "Usage: quick_cd [directory abbreivation]"
+  return 1
+fi
+
+if [[ $# -eq 0 ]]; then
+  cd
   return 1
 fi
 
@@ -56,6 +57,7 @@ if (( ! ${+CD_MAP["$1"]} )); then
   return 1
 fi
 
+echo "${CD_MAP[\"$1\"]}"
 cd "${CD_MAP[\"$1\"]}"
 return 0
 }
@@ -78,7 +80,8 @@ alias s='smart_sudo'
 alias grep='grep -i'
 alias o=open_file_or_dir
 alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2016.txt'
-alias gp=get_pass
 alias qc=quick_cd
 alias g='open_firefox.py'
 alias v='vim'
+alias dm=docker-machine
+alias st=screensaver_toggle.sh
