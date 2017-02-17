@@ -29,6 +29,8 @@ bindkey -M vicmd L turbo_right
 bindkey -M vicmd k vi-up-line-or-history
 bindkey -M vicmd j vi-down-line-or-history
 bindkey -M vicmd i vi-insert
+bindkey -M vicmd '?' history-incremental-pattern-search-backward
+bindkey -M vicmd '/' history-incremental-pattern-search-forward
 bindkey -M viins '^^' insert-last-word 
 bindkey -M viins '^h' backward-delete-char
 bindkey -M viins '^w' backward-kill-word
@@ -40,8 +42,8 @@ bindkey -M viins "^f" forward-char
 bindkey -M viins "^b" backward-char
 bindkey -M viins "^n" down-line-or-history
 bindkey -M viins "^p" up-line-or-history
-bindkey -M viins "^r" history-incremental-search-backward
-bindkey -M viins "^s" history-incremental-search-forward
+bindkey -M viins "^r" history-incremental-pattern-search-backward
+bindkey -M viins "^s" history-incremental-pattern-search-forward
 bindkey -M viins "^_" vi-cmd-mode
 bindkey . rationalise-dot
 
