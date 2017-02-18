@@ -1,0 +1,19 @@
+#compdef quick_cd
+
+_quick_cd () {
+  set_cd_map_sh=$(which set_cd_map.sh)
+
+  if [ $? -eq 1 ]; then
+    return 1
+  fi
+
+  . ${set_cd_map_sh}
+
+  if (( ! ${+CD_MAP} )); then
+    return 1
+  fi
+
+  compadd ${(k)CD_MAP}
+}
+
+_quick_cd "$@"

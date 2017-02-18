@@ -24,6 +24,20 @@ if [[ -d ~/bin/zsh ]] && [[ ! -z `ls ~/bin/zsh` ]]; then
   done
 fi
 
+# set environment vars if they are not set
+if [ -z "$DE" ] || ! [[ $PATH =~ "/home/chad/bin" ]]; then
+  # set environment vars
+  DE="generic"
+  EDITOR="vim"
+  PRINTER="HP_LaserJet_1022"
+  BROWSER="chromium"
+  typeset -U path
+  path=(~/bin $path)
+  fpath=(~/.config/zsh/compdef $fpath)
+  export DE EDITOR PRINTER BROWSER
+  export PASSWORD_STORE_DIR="${HOME}/Dropbox/docs/passwords"
+fi
+
 # prompt
 . ~/.config/zsh/prompt
 unset zle_bracketed_paste     # paste as if typing, must go after prompt
@@ -39,19 +53,6 @@ unset zle_bracketed_paste     # paste as if typing, must go after prompt
 
 # aliases
 . ~/.config/zsh/aliases
-
-# set environment vars if they are not set
-if [ -z "$DE" ] || ! [[ $PATH =~ "/home/chad/bin" ]]; then
-  # set environment vars
-  DE="generic"
-  EDITOR="vim"
-  PRINTER="HP_LaserJet_1022"
-  BROWSER="chromium"
-  typeset -U path
-  path=(~/bin $path)
-  export DE EDITOR PRINTER BROWSER
-  export PASSWORD_STORE_DIR="${HOME}/Dropbox/docs/passwords"
-fi
 
 # Start X if it is vc1 and X hasn't been started already
 if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
