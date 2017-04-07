@@ -19,7 +19,8 @@ zstyle ':completion:*:killall:*:*' command 'ps -e -o comm'
 zstyle ':completion:*:ka:*:*' command 'ps -e -o comm'
 # cd not select parent dir.
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
-# match uppercase from lowercase
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# match uppercase from lowercase + fuzzy find
+# From: PythonNut @ SO - https://superuser.com/questions/415650/does-a-fuzzy-matching-mode-exist-for-the-zsh-shell
+zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
 compdef ka=killall
 compdef smart_sudo=sudo
