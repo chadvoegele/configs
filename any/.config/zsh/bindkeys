@@ -45,7 +45,8 @@ bindkey -M viins "^p" up-line-or-history
 bindkey -M viins "^r" history-incremental-pattern-search-backward
 bindkey -M viins "^s" history-incremental-pattern-search-forward
 bindkey -M viins "^_" vi-cmd-mode
-bindkey . rationalise-dot
+bindkey -M viins . rationalise-dot
+bindkey -M isearch . self-insert
 
 bindkey -r "^q"
 
