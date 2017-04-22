@@ -30,6 +30,7 @@ export EDITOR="vim"
 export PRINTER="HP_LaserJet_1022"
 export BROWSER="chromium"
 export PASSWORD_STORE_DIR="${HOME}/Dropbox/docs/passwords"
+export LS_COLORS='rs=0:di=34:ln=36:mh=00:pi=40;33:so=35:do=35:bd=40;33:cd=40;33:or=40;31:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=32'
 upath=~/bin; [[ ${path[(i)$upath]} -le ${#path} ]] || path=($upath $path)
 ufpath=~/.config/zsh/compdef; [[ ${fpath[(i)$ufpath]} -le ${#fpath} ]] || fpath=($ufpath $fpath)
 
