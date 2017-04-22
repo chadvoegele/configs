@@ -88,7 +88,9 @@ alias grep='grep -i'
 alias o=open_file_or_dir
 alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2016.txt'
 alias qc=quick_cd
-alias g='open_firefox.py'
+alias g='open_browser.py'
 alias v='vim'
+alias ag='ag --pager="less --raw-control-chars --no-init --quit-if-one-screen"'
 alias dm=docker-machine
 alias st=screensaver_toggle.sh
+alias ta=textadept-curses
