@@ -24,19 +24,14 @@ if [[ -d ~/bin/zsh ]] && [[ ! -z `ls ~/bin/zsh` ]]; then
   done
 fi
 
-# set environment vars if they are not set
-if [ -z "$DE" ] || ! [[ $PATH =~ "/home/chad/bin" ]]; then
-  # set environment vars
-  DE="generic"
-  EDITOR="vim"
-  PRINTER="HP_LaserJet_1022"
-  BROWSER="chromium"
-  typeset -U path
-  path=(~/bin $path)
-  fpath=(~/.config/zsh/compdef $fpath)
-  export DE EDITOR PRINTER BROWSER
-  export PASSWORD_STORE_DIR="${HOME}/Dropbox/docs/passwords"
-fi
+# set environment vars
+export DE="generic"
+export EDITOR="vim"
+export PRINTER="HP_LaserJet_1022"
+export BROWSER="chromium"
+export PASSWORD_STORE_DIR="${HOME}/Dropbox/docs/passwords"
+upath=~/bin; [[ ${path[(i)$upath]} -le ${#path} ]] || path=($upath $path)
+ufpath=~/.config/zsh/compdef; [[ ${fpath[(i)$ufpath]} -le ${#fpath} ]] || fpath=($ufpath $fpath)
 
 # prompt
 . ~/.config/zsh/prompt
