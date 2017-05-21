@@ -6,21 +6,18 @@ autoload -Uz compinit
 compinit
 zstyle :compinstall filename '/home/chad/.zshrc'
 
-# allow approximate
-zstyle ':completion:*' completer _complete _match _approximate
+# http://zsh.sourceforge.net/Guide/zshguide06.html
+zstyle ':completion:*' completer _complete _approximate
+# https://github.com/mattjj/my-oh-my-zsh/blob/master/completion.zsh
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' rehash truea  # https://wiki.archlinux.org/index.php/zsh
 zstyle ':completion:*:match:*' original only
-#zstyle ':completion:*:approximate:*' max-errors 1 numeric
-# allow one error for every three characters typed in approximate completer
-zstyle -e ':completion:*:approximate:*' max-errors \
-    'reply=( $(( ($#PREFIX+$#SUFFIX)/2 )) numeric )'
 zstyle ':completion:*:functions' ignored-patterns '_*'
-# tab completion for killall :D
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*:killall:*:*' command 'ps -e -o comm'
 zstyle ':completion:*:ka:*:*' command 'ps -e -o comm'
-# cd not select parent dir.
-zstyle ':completion:*:cd:*' ignore-parents parent pwd
-# match uppercase from lowercase + fuzzy find
-# From: PythonNut @ SO - https://superuser.com/questions/415650/does-a-fuzzy-matching-mode-exist-for-the-zsh-shell
-zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
 compdef ka=killall
 compdef smart_sudo=sudo
