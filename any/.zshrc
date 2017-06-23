@@ -16,6 +16,7 @@ setopt PUSHD_IGNORE_DUPS      # ignore duplicates in dir stack
 setopt RM_STAR_WAIT           # pause before confirming rm *
 setopt SHARE_HISTORY          # share history between open shells
 setopt appendhistory          # append new history instead of overwriting
+setopt interactivecomments    # allow comments
 
 # ~/bin/zsh scripts
 if [[ -d ~/bin/zsh ]] && [[ ! -z `ls ~/bin/zsh` ]]; then
