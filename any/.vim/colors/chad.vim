@@ -28,3 +28,5 @@ highlight Folded ctermbg=grey ctermfg=darkgrey
 "
 hi Pmenu   cterm=none ctermfg=black ctermbg=grey
 hi PmenuSel   cterm=bold ctermfg=grey  ctermbg=black
+
+hi Visual cterm=NONE ctermfg=grey ctermbg=black
