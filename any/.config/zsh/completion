@@ -8,12 +8,12 @@ zstyle :compinstall filename '/home/chad/.zshrc'
 
 # http://zsh.sourceforge.net/Guide/zshguide06.html
 zstyle ':completion:*' completer _complete _approximate
-# https://github.com/mattjj/my-oh-my-zsh/blob/master/completion.zsh
-zstyle ':completion:*:approximate:*' max-errors 1 numeric
-zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*' rehash truea  # https://wiki.archlinux.org/index.php/zsh
-zstyle ':completion:*:match:*' original only
+# https://askubuntu.com/questions/825625/how-can-i-extend-the-tab-key-auto-completion-in-the-terminal-to-text-in-the-midd/825654
+zstyle ':completion:*' matcher-list '' \
+  'm:{a-z\-}={A-Z\_}' \
+  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+  'r:|?=** m:{a-z\-}={A-Z\_}'
+zstyle ':completion:*' rehash true  # https://wiki.archlinux.org/index.php/zsh
 zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
