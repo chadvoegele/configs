@@ -75,7 +75,6 @@ alias -g D='&> /dev/null &!'
 alias ls='ls --color=auto'
 alias l='ls --color=auto'
 alias alsamixer='alsamixer -g'
-alias rp='PATH=$PATH'
 alias mv='mv -i'
 alias cp='cp -i'
 alias la='ls -a'
@@ -87,10 +86,13 @@ alias s='smart_sudo'
 alias grep='grep -i'
 alias o=open_file_or_dir
 alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2016.txt'
+alias g=git
+alias v=vim
+function rgl() { rg --pretty --ignore-case "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
+alias rg=rgl
+function jql() { jq --color-output "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
+alias jg=jgl
 alias qc=quick_cd
-alias g='open_browser.py'
-alias v='vim'
-alias ag='ag --pager="less --raw-control-chars --no-init --quit-if-one-screen"'
 alias dm=docker-machine
 alias st=screensaver_toggle.sh
 alias ta=textadept-curses
