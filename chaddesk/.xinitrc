@@ -2,7 +2,7 @@
 source x_settings.sh
 xbindkeys &
 
-xrandr -s 1920x1200
+xrdb -merge ~/.Xresources
 
 /usr/bin/status_bar &
 

@@ -53,7 +53,7 @@ unset zle_bracketed_paste     # paste as if typing, must go after prompt
 
 # Start X if it is vc1 and X hasn't been started already
 if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
-  startx -- -dpi 96 -ardelay 250 -arinterval 20 vt1
+  startx -- -dpi 180 -ardelay 250 -arinterval 20 vt1
 logout
 else
   if [ -z "$SSH_AUTH_SOCK" ] || [ ! -w "$SSH_AUTH_SOCK" ]; then
