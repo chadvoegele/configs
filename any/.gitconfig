@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+name = Chad Voegele
+
+[alias]
+  logg = log --graph --decorate --oneline
+  blast = reset --hard HEAD
+  fa = fetch --all
+  co = checkout
+  st = status
