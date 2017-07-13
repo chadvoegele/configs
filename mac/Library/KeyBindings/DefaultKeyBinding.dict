@@ -1,0 +1,7 @@
+{
+  "^w" = deleteWordBackward:;
+  "^c" = copy:;
+  "^v" = paste:;
+  "^x" = cut:;
+  "^\U007f" = (moveToBeginningOfLineAndModifySelection:, delete:);
+}
