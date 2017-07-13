@@ -17,10 +17,11 @@ def parse_args():
       help='Commit changes to fs.')
   parser.add_argument('-c', dest="clean", action="store_true", default=False,
       help='Clean links')
+  parser.add_argument('-m', dest="hostname", default=os.uname()[1],
+      help='Hostname')
   args = parser.parse_args()
 
   args.git_dir = os.path.dirname(os.path.abspath(__file__))
-  args.hostname = os.uname()[1]
   args.home = os.path.expanduser("~")
 
   if args.hostname == 'any':
