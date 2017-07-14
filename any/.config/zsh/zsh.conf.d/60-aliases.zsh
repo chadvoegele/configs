@@ -85,7 +85,6 @@ alias sudo='sudo ' # this makes sudo use local aliases
 alias s='smart_sudo'
 alias grep='grep -i'
 alias o=open_file_or_dir
-alias el='vim -c "set filetype=ledger" ~/docs/money/ledger/ledger_2016.txt'
 alias g=git
 alias v=vim
 function rgl() { rg --pretty --ignore-case "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
