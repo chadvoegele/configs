@@ -3,5 +3,5 @@ unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
 [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
 xbindkeys &
-/usr/bin/status_bar --config $HOME/.config/status_bar_lodpi.conf &
+/usr/bin/status_bar --config $HOME/.config/status_bar.lodpi.conf &
 openbox &
