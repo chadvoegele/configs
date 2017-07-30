@@ -199,3 +199,11 @@ events.connect(events.FILE_OPENED, function()
     buffer:set_lexer('todo')
   end
 end)
+
+-- Makefiles
+events.connect(events.LEXER_LOADED, function(lexer)
+  if lexer == 'makefile' then
+    buffer.use_tabs = true
+    buffer.view_ws = buffer.WS_VISIBLEONLYININDENT
+  end
+end)
