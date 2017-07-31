@@ -86,7 +86,7 @@ alias v=vim
 function rgl() { rg --pretty --ignore-case "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
 alias rg=rgl
 function jql() { jq --color-output "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
-alias jg=jgl
+alias jq=jql
 alias qc=quick_cd
 alias dm=docker-machine
 alias st=screensaver_toggle.sh
