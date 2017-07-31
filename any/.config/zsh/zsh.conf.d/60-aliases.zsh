@@ -73,13 +73,9 @@ function quick_cd() {
 alias -g D='&> /dev/null &!'
 
 alias ls='ls --color=auto'
-alias l='ls --color=auto'
 alias alsamixer='alsamixer -g'
 alias mv='mv -i'
 alias cp='cp -i'
-alias la='ls -a'
-alias ll='ls -l'
-alias sl='ls'
 alias md='mkdir -p'
 alias sudo='sudo ' # this makes sudo use local aliases
 alias s='smart_sudo'
