@@ -161,12 +161,17 @@ keys.normal['cw']['n'] = function () view:goto_buffer(1) end
 keys.normal['cw']['p'] = function () view:goto_buffer(-1) end
 
 -- View Navigation
-keys.normal['cw']['q'] = function () io.close_buffer() end
+-- https://foicica.com/wiki/close-unsplit-view
+keys.normal['cw']['q'] = function ()
+  io.close_buffer()
+  ui.goto_view(-1)
+  view:unsplit()
+end
+keys.normal['cw']['c'] = keys.normal['cw']['q']
 keys.normal['cw']['w'] = function () ui.goto_view(1) end
 keys.normal['cw']['cw'] = function () ui.goto_view(-1) end
 keys.normal['cw']['s'] = function () view:split() end
 keys.normal['cw']['v'] = function () view:split(true) end
-keys.normal['cw']['c'] = function () view:unsplit() end
 
 -- Text Redux
 local textredux = require('textredux')
