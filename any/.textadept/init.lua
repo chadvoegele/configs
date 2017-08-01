@@ -234,3 +234,11 @@ if not keys.visual['g'] then keys.visual['g'] = {} end
 keys.visual['g']['c'] = function () tavi.adjust_act(replaceMath) end
 if not keys.visual_line['g'] then keys.visual_line['g'] = {} end
 keys.visual_line['g']['c'] = function () tavi.adjust_act(replaceMath) end
+
+-- Replace
+s = function (ftext, rtext)
+  local save_find_regex = ui.find.regex
+  ui.find.regex = true
+  events.emit(events.REPLACE_ALL, ftext, rtext)
+  ui.find.regex = save_find_regex
+end
