@@ -242,3 +242,14 @@ s = function (ftext, rtext)
   events.emit(events.REPLACE_ALL, ftext, rtext)
   ui.find.regex = save_find_regex
 end
+
+-- Toggle Line Numbers (actually toggle margins but line number is easier to remember)
+toggle_line_numbers = function ()
+  if buffer.margin_width_n[0] == 0 and buffer.margin_width_n[1] == 0 then
+    buffer.margin_width_n[0] = 4
+    buffer.margin_width_n[1] = 1
+  else
+    buffer.margin_width_n[0] = 0
+    buffer.margin_width_n[1] = 0
+  end
+end
