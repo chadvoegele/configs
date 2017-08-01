@@ -207,3 +207,18 @@ events.connect(events.LEXER_LOADED, function(lexer)
     buffer.view_ws = buffer.WS_VISIBLEONLYININDENT
   end
 end)
+
+-- Calculator
+-- https://foicica.com/wiki/bcmath
+function replaceMath()
+  local text = buffer:get_sel_text()
+  local p = io.popen('echo "'..text..'" | bc 2>&1')
+  local out = p:read('*all')
+  p:close()
+  buffer:replace_sel(out:gsub("\n", ""))
+end
+
+if not keys.visual['g'] then keys.visual['g'] = {} end
+keys.visual['g']['c'] = function () tavi.adjust_act(replaceMath) end
+if not keys.visual_line['g'] then keys.visual_line['g'] = {} end
+keys.visual_line['g']['c'] = function () tavi.adjust_act(replaceMath) end
