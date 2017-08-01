@@ -159,6 +159,14 @@ keys.normal['cw']['cn'] = function () view:goto_buffer(1) end
 keys.normal['cw']['cp'] = function () view:goto_buffer(-1) end
 keys.normal['cw']['n'] = function () view:goto_buffer(1) end
 keys.normal['cw']['p'] = function () view:goto_buffer(-1) end
+local last_buffer = buffer
+events.connect(events.BUFFER_BEFORE_SWITCH, function() last_buffer = buffer end)
+keys.normal['cw']['w'] = function()
+  if _BUFFERS[last_buffer] then
+    view:goto_buffer(last_buffer)
+  end
+end
+keys.normal['cw']['cw'] = keys.normal['cw']['w']
 
 -- View Navigation
 -- https://foicica.com/wiki/close-unsplit-view
@@ -168,8 +176,7 @@ keys.normal['cw']['q'] = function ()
   view:unsplit()
 end
 keys.normal['cw']['c'] = keys.normal['cw']['q']
-keys.normal['cw']['w'] = function () ui.goto_view(1) end
-keys.normal['cw']['cw'] = function () ui.goto_view(-1) end
+keys.normal['cw']['o'] = function () ui.goto_view(1) end
 keys.normal['cw']['s'] = function () view:split() end
 keys.normal['cw']['v'] = function () view:split(true) end
 
