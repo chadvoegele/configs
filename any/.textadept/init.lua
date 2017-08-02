@@ -204,6 +204,9 @@ end
 keys.visual_line['cc'] = {}
 keys.visual_line['cc']['cc'] = keys.visual['cc']['cc']
 
+-- Javascript
+tajs = require('textadept-js').init()
+
 -- textadept-todo
 events.connect(events.FILE_OPENED, function()
   local fname = buffer.filename and buffer.filename:match('[^/]+$')
