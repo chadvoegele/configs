@@ -38,7 +38,7 @@ end)
 -- Vim+overrides
 tavi = require('textadept-vi')
 keys.normal['U'] = buffer.redo
-keys['cw'] = function () buffer:del_word_left() end
+keys['cw'] = function () tavi.cut.word_start() end
 keys.lua_command['cw'] = function () ui.command_entry:del_word_left() end
 
 ---- Turbo Nav
