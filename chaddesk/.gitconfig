@@ -4,3 +4,4 @@
 
 [include]
   path = ~/.config/git/aliases
+  path = ~/.config/git/core
