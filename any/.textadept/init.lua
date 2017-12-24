@@ -183,8 +183,25 @@ keys.normal['cw']['v'] = function () view:split(true) end
 -- Text Redux
 local textredux = require('textredux')
 keys.normal['cp'] = function ()
-  local dir = io.get_project_root() or buffer.filename:match('^(.+)[/\\]') or _HOME
-  textredux.fs.snapopen(dir)
+  local dir = io.get_project_root() or buffer.filename and buffer.filename:match('^(.+)[/\\]') or os.getenv('PWD') or _HOME
+  local fignore = io.open(dir..'/.gitignore', 'r')
+  if not fignore then
+    textredux.fs.snapopen(dir)
+    return
+  end
+  local ignore = {}
+  for line in fignore:lines() do
+    table.insert(ignore, line)
+  end
+  fignore:close()
+  local filterFn = function (filename)
+    filter = false
+    for _, patt in pairs(ignore) do
+      filter = filter or string.find(filename, patt) ~= nil
+    end
+    return filter
+  end
+  textredux.fs.snapopen(dir, { filterFn, folders = { filterFn }})
 end
 keys.normal['co'] = textredux.buffer_list.show
 keys.normal['cg'] = textredux.ctags.goto_symbol
