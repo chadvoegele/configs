@@ -191,7 +191,9 @@ keys.normal['cp'] = function ()
   end
   local ignore = {}
   for line in fignore:lines() do
-    table.insert(ignore, line)
+    if not line:match('^$') then
+      table.insert(ignore, line)
+    end
   end
   fignore:close()
   local filterFn = function (filename)
