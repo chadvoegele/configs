@@ -1,7 +1,0 @@
-[user]
-	email = cavoegele@gmail.com
-	name = Chad Voegele
-
-[include]
-  path = ~/.config/git/aliases
-  path = ~/.config/git/core
