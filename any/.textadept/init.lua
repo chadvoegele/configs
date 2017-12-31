@@ -275,3 +275,10 @@ toggle_line_numbers = function ()
     buffer.margin_width_n[1] = 0
   end
 end
+
+-- editorconfig
+if pcall(require, 'editorconfig_core') then
+  require('editorconfig')
+else
+  io.stderr:write('Failed to load editorconfig\n')
+end
