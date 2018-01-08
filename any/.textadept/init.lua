@@ -76,8 +76,7 @@ keys['cs'] = function () io.save_file() tavi.enter_mode('normal') end
 keys.find_incremental[CURSES and 'c_' or 'c;'] = function ()
   ui.find.find_entry_text = ui.command_entry:get_text()
   ui.command_entry.enter_mode()
-  tavi.enter_mode('visual')
-  tavi.select.character_left()
+  tavi.enter_mode('normal')
 end
 -- Remap c; to c_ via terminal.
 keys.find_incremental_reverse[CURSES and 'c_' or 'c;'] = keys.find_incremental[CURSES and 'c_' or 'c;']
