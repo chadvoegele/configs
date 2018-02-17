@@ -181,28 +181,37 @@ keys.normal['cw']['v'] = function () view:split(true) end
 
 -- Text Redux
 local textredux = require('textredux')
+local get_ignore_cache = {}
+local get_ignore = function (dir)
+  local fignore_path = dir..'/.gitignore'
+  if get_ignore_cache[fignore_path] then return get_ignore_cache[fignore_path] end
+  local fignore = io.open(fignore_path, 'r')
+  if not fignore then return nil end
+  local ignore = {}
+  for line in fignore:lines() do table.insert(ignore, line) end
+  fignore:close()
+  get_ignore_cache[fignore_path] = ignore
+  return ignore
+end
+local filterFn = function (dir, ignore, filename)
+  filter = false
+  for _, patt in pairs(ignore) do
+    local trim_patt = patt:gsub('^%s+', ''):gsub('%s+$', '')
+    if not trim_patt:match('^$') and not trim_patt:match('[*]') then
+      filter = filter or string.find(filename, dir..'/'..trim_patt) ~= nil
+    end
+  end
+  return filter
+end
 keys.normal['cp'] = function ()
   local dir = io.get_project_root() or buffer.filename and buffer.filename:match('^(.+)[/\\]') or os.getenv('PWD') or _HOME
-  local fignore = io.open(dir..'/.gitignore', 'r')
-  if not fignore then
+  local ignore = get_ignore(dir)
+  if not ignore then
     textredux.fs.snapopen(dir)
     return
   end
-  local ignore = {}
-  for line in fignore:lines() do
-    if not line:match('^$') then
-      table.insert(ignore, line)
-    end
-  end
-  fignore:close()
-  local filterFn = function (filename)
-    filter = false
-    for _, patt in pairs(ignore) do
-      filter = filter or string.find(filename, patt) ~= nil
-    end
-    return filter
-  end
-  textredux.fs.snapopen(dir, { filterFn, folders = { filterFn }})
+  local f = function (filename) return filterFn(dir, ignore, filename) end
+  textredux.fs.snapopen(dir, { f, folders = { f }})
 end
 keys.normal['co'] = textredux.buffer_list.show
 keys.normal['cg'] = textredux.ctags.goto_symbol
