@@ -232,7 +232,10 @@ keys.visual_line['cc'] = {}
 keys.visual_line['cc']['cc'] = keys.visual['cc']['cc']
 
 -- Javascript
-tajs = require('textadept-js').init()
+if not keys.normal['g'] then keys.normal['g'] = {} end
+if not keys.normal['g']['j'] then keys.normal['g']['j'] = {} end
+tajs = require('textadept-js')
+keys.normal['g']['j']['c'] = function () io.save_file() tajs.check() end
 
 -- textadept-todo
 events.connect(events.FILE_OPENED, function()
