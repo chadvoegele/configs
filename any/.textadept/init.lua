@@ -166,6 +166,8 @@ keys.normal['cw']['w'] = function()
   end
 end
 keys.normal['cw']['cw'] = keys.normal['cw']['w']
+keys.normal['cw'][';'] = keys.normal['cw']['w']
+keys.normal['cw'][CURSES and 'c_' or 'c;'] = keys.normal['cw']['w']
 
 -- View Navigation
 -- https://foicica.com/wiki/close-unsplit-view
