@@ -1,2 +1,2 @@
 [core]
-  pager = less -i
+  pager = less -i -R
