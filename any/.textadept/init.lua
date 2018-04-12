@@ -200,7 +200,7 @@ local filterFn = function (dir, ignore, filename)
   for _, patt in pairs(ignore) do
     local trim_patt = patt:gsub('^%s+', ''):gsub('%s+$', '')
     if not trim_patt:match('^$') and not trim_patt:match('[*]') then
-      filter = filter or string.find(filename, dir..'/'..trim_patt) ~= nil
+      filter = filter or string.find(filename, dir..'/'..trim_patt, 1, true) ~= nil
     end
   end
   return filter
