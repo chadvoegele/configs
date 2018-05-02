@@ -7,9 +7,9 @@ textadept.editing.typeover_chars = nil
 
 -- Themes
 if CURSES then
-  buffer.set_theme('light-term')
+  buffer:set_theme('light-term')
 else
-  buffer.set_theme('light')
+  buffer:set_theme('light')
 end
 
 buffer.margin_width_n[2] = not CURSES and 12 or 0
