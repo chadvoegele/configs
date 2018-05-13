@@ -129,7 +129,7 @@ textadept.editing.autocompleters.filename = function ()
 end
 
 -- Mapped from cspace in terminal.
-keys[CURSES and 'c@' or 'c '] = function () textadept.editing.autocomplete('word') end
+keys['c '] = function () textadept.editing.autocomplete('word') end
 -- Mapped from cReturn in terminal.
 keys[CURSES and 'c\\' or 'c\n'] = function () textadept.editing.autocomplete(buffer:get_lexer(true)) end
 keys['cx'] = {}
@@ -277,6 +277,9 @@ s = function (ftext, rtext)
   events.emit(events.REPLACE_ALL, ftext, rtext)
   ui.find.regex = save_find_regex
 end
+
+-- Filter Through
+ft = textadept.editing.filter_through
 
 -- Toggle Line Numbers (actually toggle margins but line number is easier to remember)
 toggle_line_numbers = function ()
