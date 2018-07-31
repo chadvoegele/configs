@@ -1,3 +1,10 @@
+-- Remove all textadept.keys key bindings
+for k, v in pairs(keys) do
+  if k~= 'CLEAR' and type(v) ~= 'table' then
+    keys[k] = nil
+  end
+end
+
 -- Textadept configs
 textadept.editing.autocomplete_all_words = true
 textadept.editing.strip_trailing_spaces = true
