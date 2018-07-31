@@ -198,6 +198,7 @@ keys.normal['cw']['v'] = function () view:split(true) end
 
 -- Text Redux
 local textredux = require('textredux')
+textredux.core.buffer.DEFAULT_MODE = 'normal'
 local get_ignore_cache = {}
 local get_ignore = function (dir)
   local fignore_path = dir..'/.gitignore'
