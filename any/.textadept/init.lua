@@ -54,25 +54,25 @@ keys['cw'] = function () tavi.cut.word_start() end
 keys.lua_command['cw'] = function () ui.command_entry:del_word_left() end
 
 ---- Turbo Nav
-keys.normal['H'] = function () tavi.move.character_left(5) tavi.set_line_offset() end
+keys.normal['H'] = function () tavi.move.character_left(5) tavi.set_caret_x() end
 keys.normal['J'] = function () tavi.move.line_down(5) end
 keys.normal['K'] = function () tavi.move.line_up(5) end
-keys.normal['L'] = function () tavi.move.character_right(5) tavi.set_line_offset() end
+keys.normal['L'] = function () tavi.move.character_right(5) tavi.set_caret_x() end
 
-keys.visual['H'] = function () tavi.select.character_left(5) tavi.set_line_offset() end
+keys.visual['H'] = function () tavi.select.character_left(5) tavi.set_caret_x() end
 keys.visual['J'] = function () tavi.select.line_down(5) end
 keys.visual['K'] = function () tavi.select.line_up(5) end
-keys.visual['L'] = function () tavi.select.character_right(5) tavi.set_line_offset() end
+keys.visual['L'] = function () tavi.select.character_right(5) tavi.set_caret_x() end
 
 keys.visual_line['H'] = function () tavi.select_line.character_left(5) end
 keys.visual_line['J'] = function () tavi.select_line.line_down(5) end
 keys.visual_line['K'] = function () tavi.select_line.line_up(5) end
 keys.visual_line['L'] = function () tavi.select_line.character_right(5) end
 
-keys.visual_block['H'] = function () tavi.select_block.character_left(5) tavi.set_line_offset() end
+keys.visual_block['H'] = function () tavi.select_block.character_left(5) tavi.set_caret_x() end
 keys.visual_block['J'] = function () tavi.select_block.line_down(5) end
 keys.visual_block['K'] = function () tavi.select_block.line_up(5) end
-keys.visual_block['L'] = function () tavi.select_block.character_right(5) tavi.set_line_offset() end
+keys.visual_block['L'] = function () tavi.select_block.character_right(5) tavi.set_caret_x() end
 
 -- Quit/Save
 keys.normal['cs'] = io.save_file
