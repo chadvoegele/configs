@@ -85,6 +85,7 @@ keys.find_incremental[CURSES and 'c_' or 'c;'] = function ()
   ui.command_entry.enter_mode()
   tavi.enter_mode('normal')
 end
+
 -- Remap c; to c_ via terminal.
 keys.find_incremental_reverse[CURSES and 'c_' or 'c;'] = keys.find_incremental[CURSES and 'c_' or 'c;']
 
@@ -94,6 +95,13 @@ for _, k in ipairs(exit_command_modes) do
     ui.command_entry.enter_mode(nil)
     tavi.enter_mode('normal')
   end
+end
+
+-- TODO: Propose keys.DEFAULT_MODE = 'normal' in TA
+ui.command_entry.finish_mode = function (f)
+  if ui.command_entry:auto_c_active() then return false end -- allow Enter to autocomplete
+  ui.command_entry.enter_mode('normal') -- ui.command_entry.enter_mode(keys.DEFAULT_MODE)
+  if f then f(ui.command_entry:get_text()) end
 end
 
 keys[CURSES and 'c_' or 'c;'] = function ()
