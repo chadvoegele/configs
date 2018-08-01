@@ -125,8 +125,9 @@ textadept.editing.autocompleters.filename = function ()
   local part = line:sub(1, pos):match('[\'"]?([~/$]?[%w_%./-]+)$')
   if not part or part == '' then return nil end
   local home = os.getenv('HOME')
-  if not home and part:match('~') then return nil end
-  part = part:gsub('~', home)
+  local has_tilde = part:match('~')
+  if not home and has_tilde then return nil end
+  part = has_tilde and part:gsub('~', home) or part
   local lastslash = string.find(string.reverse(part), '/')
   local dir = lastslash and part:sub(1, #part - lastslash + 1) or part
   if lfs.attributes(dir, 'mode') == 'directory' then
@@ -134,12 +135,12 @@ textadept.editing.autocompleters.filename = function ()
       file = file:gsub('/(/*)', '/')  -- remove repeated /'s
       -- no support for filenames with spaces due to conflict with auto_c_separator
       if file:find(part, 1, true) == 1 and not file:match(' ') then
-        file = file:gsub(home, '~')
+        file = has_tilde and file:gsub(home, '~') or file
         list[#list + 1] = file
       end
     end, nil, 0, true)
   end
-  part = part:gsub(home, '~')
+  part = has_tilde and part:gsub(home, '~') or part
   return #part, list
 end
 
