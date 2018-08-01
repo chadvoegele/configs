@@ -1,9 +1,13 @@
--- Remove all textadept.keys key bindings
+-- Remove all textadept.keys key bindings but add back the good ones
 for k, v in pairs(keys) do
   if k~= 'CLEAR' and type(v) ~= 'table' then
     keys[k] = nil
   end
 end
+keys.cf, keys.cb = buffer.char_right, buffer.char_left
+keys.cn, keys.cp = buffer.line_down, buffer.line_up
+keys.ca, keys.ce = buffer.vc_home, buffer.line_end
+keys.ch = buffer.delete_back
 
 -- Textadept configs
 textadept.editing.autocomplete_all_words = true
