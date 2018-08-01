@@ -133,8 +133,7 @@ textadept.editing.autocompleters.filename = function ()
   if lfs.attributes(dir, 'mode') == 'directory' then
     lfs.dir_foreach(dir, function(file)
       file = file:gsub('/(/*)', '/')  -- remove repeated /'s
-      -- no support for filenames with spaces due to conflict with auto_c_separator
-      if file:find(part, 1, true) == 1 and not file:match(' ') then
+      if file:find(part, 1, true) == 1 then
         file = has_tilde and file:gsub(home, '~') or file
         list[#list + 1] = file
       end
@@ -150,12 +149,15 @@ keys['c '] = function () textadept.editing.autocomplete('word') end
 keys[CURSES and 'c\\' or 'c\n'] = function () textadept.editing.autocomplete(buffer:get_lexer(true)) end
 keys['cx'] = {}
 keys['cx']['cf'] = function ()
+  local sep = buffer.auto_c_separator
+  buffer.auto_c_separator = string.byte('\n')  -- support filenames with spaces
   if buffer:auto_c_active() then
     buffer:auto_c_complete()
     textadept.editing.autocomplete('filename')
   else
     textadept.editing.autocomplete('filename')
   end
+  buffer.auto_c_separator = sep -- restore
 end
 
 ---- cn/cp in lua_command mode
