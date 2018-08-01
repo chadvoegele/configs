@@ -5,7 +5,8 @@ for k, v in pairs(keys) do
   end
 end
 keys.cf, keys.cb = buffer.char_right, buffer.char_left
-keys.cn, keys.cp = buffer.line_down, buffer.line_up
+keys['cn'] = function () buffer:line_down() end
+keys['cp'] = function () buffer:line_up() end
 keys.ca, keys.ce = buffer.vc_home, buffer.line_end
 keys.ch = buffer.delete_back
 
