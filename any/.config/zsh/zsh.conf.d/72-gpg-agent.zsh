@@ -1,6 +1,6 @@
 export GPG_TTY=$(tty)
 
-command -v gpg-connect-agent
+command -v gpg-connect-agent >/dev/null
 if [[ $? -eq 0 ]]
 then
   # Refresh gpg-agent tty in case user switches into an X session
