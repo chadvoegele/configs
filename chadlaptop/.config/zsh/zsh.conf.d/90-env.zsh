@@ -1,2 +1,2 @@
-export BROWSER="chromium"
+export BROWSER="firefox"
 export PASSWORD_STORE_DIR="${HOME}/Dropbox/docs/passwords"
