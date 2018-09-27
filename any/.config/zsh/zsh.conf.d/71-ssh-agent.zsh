@@ -1,5 +1,5 @@
 if [ -z "$SSH_AUTH_SOCK" ] || [ ! -w "$SSH_AUTH_SOCK" ]; then
-  pid_ssh_agent=`pidof ssh-agent`
+  pid_ssh_agent=$(ps -o pid= -C ssh-agent)
   if [ -z $pid_ssh_agent ]; then
     ssh-agent -s > ~/.ssh/ssh-agent.sh
   fi
