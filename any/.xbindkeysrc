@@ -2,7 +2,7 @@
   Mod2+Mod5 + Return
 "kitty"
   Shift+Mod2+Mod5 + Return
-"gmrun"
+"rofi -combi-modi window,drun -show combi -modi combi -lines 10 -font 'mono 24'"
   Alt + space
 "amixer sset 'Master' 7+"
   Mod2+Mod5 + Right
