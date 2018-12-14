@@ -296,7 +296,7 @@ keys.visual_line['g']['c'] = function () tavi.adjust_act(replaceMath) end
 
 -- Replace
 s = function (regexp, replacement)
-  return textadept.editing.filter_through('sed "s/'..regexp..'/'..replacement..'/g"')
+  return textadept.editing.filter_through('sed "s/'..regexp:gsub('"', '\\"')..'/'..replacement:gsub('"', '\\"')..'/g"')
 end
 
 -- Filter Through
