@@ -20,3 +20,5 @@ if [[ ${FASD_EXISTS} -eq 0 ]]
 then
   setup_fasd
 fi
+
+export _FASD_FUZZY=6
