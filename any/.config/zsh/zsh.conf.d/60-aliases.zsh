@@ -82,7 +82,7 @@ alias sudo='sudo ' # this makes sudo use local aliases
 alias s='smart_sudo'
 alias o=open_file_or_dir
 alias g=git
-alias v=vim
+alias v=nvim
 function rgl() { rg --pretty --ignore-case "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
 alias rg=rgl
 function jql() { jq --color-output "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
