@@ -1,5 +1,2 @@
-upath=~/bin
-[[ ${path[(i)$upath]} -le ${#path} ]] || path=($upath $path)
-
-ufpath=~/.config/zsh/compdef
-[[ ${fpath[(i)$ufpath]} -le ${#fpath} ]] || fpath=($ufpath $fpath)
+user_paths=("$HOME/bin")
+user_comp_paths=("$HOME/.config/zsh/compdef")
