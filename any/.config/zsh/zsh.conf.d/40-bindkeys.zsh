@@ -8,7 +8,6 @@ rationalise-dot() {
 }
 zle -N rationalise-dot
 
-# two functions below could be simplified by passing in $cmd
 turbo_left() {
   cmd="vi-backward-char"
   for i in {1..5}; do; zle $cmd; done;
@@ -46,14 +45,7 @@ bindkey -M viins "^r" history-incremental-pattern-search-backward
 bindkey -M viins "^s" history-incremental-pattern-search-forward
 bindkey -M viins "^_" vi-cmd-mode
 bindkey -M viins . rationalise-dot
-bindkey -M isearch . self-insert
-
-bindkey -r "^q"
-
-# remove delay using escape to enter command mode
-bindkey -rpM viins '\e'
-bindkey -rpM viins '^['
-KEYTIMEOUT=10
-
 bindkey -M viins "^[[D" backward-char
 bindkey -M viins "^[[C" forward-char
+bindkey -M isearch . self-insert
+KEYTIMEOUT=1

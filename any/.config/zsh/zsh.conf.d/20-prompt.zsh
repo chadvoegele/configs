@@ -51,5 +51,3 @@ prompt_chad_precmd () {
 
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd prompt_chad_precmd
-
-unset zle_bracketed_paste     # paste as if typing, must go after prompt
