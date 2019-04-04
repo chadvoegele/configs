@@ -8,5 +8,3 @@
   Mod2+Mod5 + Right
 "amixer sset 'Master' 7-"
   Mod2+Mod5 + Left
-"xset s activate"
-  F12
