@@ -1,2 +1,4 @@
 [core]
   pager = less -i -R
+[color]
+  ui = auto
