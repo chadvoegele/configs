@@ -27,5 +27,5 @@ nnoremap gl- o<Esc>80i-<Esc>
 nnoremap gl= o<Esc>80i=<Esc>
 
 " fzf
-nnoremap <C-p> :Files<cr>
-nnoremap <C-j> :Buffers<cr>
+nnoremap <C-p> :Files!<cr>
+nnoremap <C-j> :Buffers!<cr>
