@@ -1,0 +1,6 @@
+input "1241:17733:USB_Keyboard" {
+    xkb_layout us_prog
+    xkb_options ctrl:nocaps,altwin:prtsc_rwin
+    repeat_delay 250
+    repeat_rate 20
+}
