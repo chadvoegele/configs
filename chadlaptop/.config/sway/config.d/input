@@ -1,0 +1,6 @@
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout us_prog
+    xkb_options ctrl:nocaps,altwin:prtsc_rwin
+    repeat_delay 250
+    repeat_rate 20
+}
