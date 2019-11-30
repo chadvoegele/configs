@@ -7,7 +7,8 @@ set $term alacritty
 
 bindsym Mod5+Return exec $term
 bindsym $mod+Shift+q kill
-bindsym $mod+Space exec termite --name=launcher -e "bash -c 'sort -u \"${HOME}/.launcher\" | fzf --print-query | tail -1 | tee -a \"${HOME}/.launcher\" | xargs -r swaymsg -t command exec'"
+bindsym $mod+Space exec termite --name=launcher -e "launch_program.sh"
+bindsym $mod+Shift+Space exec termite --name=launcher -e "switch_windows.sh"
 for_window [app_id="^launcher$"] floating enable, border none
 floating_modifier $mod normal
 bindsym F12 reload
@@ -48,13 +49,15 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+workspace back_and_forth yes
+bindsym Mod5+Tab workspace back_and_forth
 bindsym $mod+b splith
 bindsym $mod+v splitv
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+t floating toggle
 bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
