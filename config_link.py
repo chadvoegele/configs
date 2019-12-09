@@ -4,7 +4,7 @@ import os, sys, argparse
 def dirs_to_check_for_dead_links():
   # relative to $HOME
   # (dir, recursive_find?)
-  dirs = [("", False), (".config", True)]
+  dirs = [("", False), (".config", True), (".local/share", True)]
   return dirs
 
 def parse_args():
