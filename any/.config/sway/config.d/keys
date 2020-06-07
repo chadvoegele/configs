@@ -74,3 +74,8 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+mode passthrough {
+	bindsym $mod+F11 mode default
+}
+bindsym $mod+F11 mode passthrough
