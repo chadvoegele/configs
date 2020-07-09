@@ -1,0 +1,64 @@
+default
+partial alphanumeric_keys modifier_keys
+xkb_symbols "basic" {
+    name[Group1]= "us_prog";
+
+    // Alphanumeric section
+    key <TLDE> { [   grave,         asciitilde                               ] };
+    key <AE01> { [   1,             exclam                                   ] };
+    key <AE02> { [   2,             at                                       ] };
+    key <AE03> { [   3,             numbersign                               ] };
+    key <AE04> { [   4,             dollar                                   ] };
+    key <AE05> { [   5,             percent                                  ] };
+    key <AE06> { [   6,             asciicircum                              ] };
+    key <AE07> { [   7,             ampersand                                ] };
+    key <AE08> { [   8,             asterisk                                 ] };
+    key <AE09> { [   9,             parenleft                                ] };
+    key <AE10> { [   0,             parenright                               ] };
+    key <AE11> { [   minus,         underscore                               ] };
+    key <AE12> { [   equal,         plus                                     ] };
+
+    key <AD01> { [   q,             Q                                        ] };
+    key <AD02> { [   w,             W,            asciitilde                 ] };
+    key <AD03> { [   e,             E,            backslash                  ] };
+    key <AD04> { [   r,             R,            braceleft                  ] };
+    key <AD05> { [   t,             T,            braceright                 ] };
+    key <AD06> { [   y,             Y,            numbersign                 ] };
+    key <AD07> { [   u,             U,            7                          ] };
+    key <AD08> { [   i,             I,            8                          ] };
+    key <AD09> { [   o,             O,            9                          ] };
+    key <AD10> { [   p,             P,            asterisk                   ] };
+    key <AD11> { [   bracketleft,   braceleft,    slash                      ] };
+    key <AD12> { [   bracketright,  braceright,   grave                      ] };
+
+    key <AC01> { [   a,             A,            parenleft                  ] };
+    key <AC02> { [   s,             S,            parenright                 ] };
+    key <AC03> { [   d,             D,            equal                      ] };
+    key <AC04> { [   f,             F,            underscore                 ] };
+    key <AC05> { [   g,             G,            ampersand                  ] };
+    key <AC06> { [   h,             H,            plus                       ] };
+    key <AC07> { [   j,             J,            4                          ] };
+    key <AC08> { [   k,             K,            5,            percent      ] };
+    key <AC09> { [   l,             L,            6,            asciicircum  ] };
+    key <AC10> { [   semicolon,     colon,        minus                      ] };
+    key <AC11> { [   apostrophe,    quotedbl,     comma                      ] };
+
+    key <AB01> { [   z,             Z,            bracketleft                ] };
+    key <AB02> { [   x,             X,            bracketright               ] };
+    key <AB03> { [   c,             C,            dollar                     ] };
+    key <AB04> { [   v,             V,            bar                        ] };
+    key <AB05> { [   b,             B,            exclam                     ] };
+    key <AB06> { [   n,             N,            0                          ] };
+    key <AB07> { [   m,             M,            1                          ] };
+    key <AB08> { [   comma,         less,         2,            at           ] };
+    key <AB09> { [   period,        greater,      3,            numbersign   ] };
+    key <AB10> { [   slash,         question,     period                     ] };
+
+    key <BKSL> { [   backslash,     bar                                      ] };
+    key <CAPS> { [   Caps_Lock                                               ] };
+    // End alphanumeric section
+
+    include "level3(alt_switch)"
+    include "altwin(alt_win)"
+    include "altwin(prtsc_rwin)"
+};
