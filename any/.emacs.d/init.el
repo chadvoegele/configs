@@ -1,37 +1,23 @@
-;; Set up package.el to work with MELPA
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 (package-refresh-contents)
 
-;; Download Evil
-(unless (package-installed-p 'evil)
-  (package-install 'evil))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-;; Enable Evil
-(require 'evil)
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+(use-package evil)
+(use-package helm)
+(use-package flycheck)
+(use-package ledger-mode)
+(use-package anti-zenburn-theme)
+(use-package powerline)
+
 (evil-mode 1)
-
-(unless (package-installed-p 'helm)
-  (package-install 'helm))
-(require 'helm)
-
-(unless (package-installed-p 'flycheck)
-  (package-install 'flycheck))
-(require 'flycheck)
-
-(unless (package-installed-p 'ledger-mode)
-  (package-install 'ledger-mode))
-(require 'ledger-mode)
-
-(unless (package-installed-p 'anti-zenburn-theme)
-  (package-install 'anti-zenburn-theme))
-(load-theme 'anti-zenburn t)
-
-(unless (package-installed-p 'powerline)
-  (package-install 'powerline))
-(require 'powerline)
 (powerline-center-evil-theme)
 
 (evil-define-key '(normal visual) 'global
