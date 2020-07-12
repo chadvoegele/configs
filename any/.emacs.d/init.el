@@ -44,6 +44,10 @@
   (kbd "C-p") 'helm-find-files
   (kbd "C-j") 'helm-mini
 )
+(evil-define-key '(normal visual insert) 'global
+  (kbd "C-s") (lambda () (interactive) (evil-force-normal-state) (save-buffer))
+  (kbd "C-q") (lambda () (interactive) (save-buffers-kill-terminal))
+)
 (define-key evil-insert-state-map   (kbd "C-_") 'evil-force-normal-state)
 (define-key evil-normal-state-map   (kbd "C-_") 'evil-force-normal-state)
 (define-key evil-motion-state-map   (kbd "C-_") 'evil-force-normal-state)
