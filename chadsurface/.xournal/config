@@ -37,7 +37,7 @@ use_erasertip=false
 # always map touchscreen device to hand tool (true/false) (requires separate pen and touch devices)
 touchscreen_as_hand_tool=true
 # disable touchscreen device when pen is in proximity (true/false) (requires separate pen and touch devices)
-pen_disables_touch=false
+pen_disables_touch=true
 # name of touchscreen device for touchscreen_as_hand_tool
 touchscreen_device_name=Surface3 SPI Capacitive TouchScreen
 # buttons 2 and 3 switch mappings instead of drawing (useful for some tablets) (true/false)

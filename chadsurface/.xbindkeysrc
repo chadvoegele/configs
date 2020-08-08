@@ -1,7 +1,7 @@
 # set directly keycode (here control + f with my keyboard)
-"st -g 119x20 -e tmux"
+"alacritty -e tmux"
   Mod2+Mod5 + Return
-"st -g 119x20"
+"alacritty"
   Shift+Mod2+Mod5 + Return
 "gmrun"
   Alt + space
@@ -11,3 +11,7 @@
   XF86AudioLowerVolume
 "onboard"
   Alt + XF86AudioLowerVolume
+"amixer set Speaker 7+; amixer set Headphone 7+"
+  Mod2+Mod5 + Right
+"amixer set Speaker 7-; amixer set Headphone 7-"
+  Mod2+Mod5 + Left
