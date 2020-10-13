@@ -1,6 +1,7 @@
 [alias]
   blast = reset --hard HEAD
   fa = fetch --all
+  f = fetch
   co = checkout
   st = status
   d = diff
