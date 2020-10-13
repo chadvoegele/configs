@@ -34,17 +34,24 @@
   (kbd "C-s") (lambda () (interactive) (evil-force-normal-state) (save-buffer))
   (kbd "C-q") (lambda () (interactive) (save-buffers-kill-terminal))
 )
-(define-key evil-insert-state-map   (kbd "C-_") 'evil-force-normal-state)
-(define-key evil-normal-state-map   (kbd "C-_") 'evil-force-normal-state)
-(define-key evil-motion-state-map   (kbd "C-_") 'evil-force-normal-state)
-(define-key evil-window-map         (kbd "C-_") 'evil-force-normal-state)
-(define-key evil-operator-state-map (kbd "C-_") 'evil-force-normal-state)
+(define-key evil-insert-state-map   (kbd "C-_") 'evil-normal-state)
+(define-key evil-normal-state-map   (kbd "C-_") 'evil-normal-state)
+(define-key evil-motion-state-map   (kbd "C-_") 'evil-normal-state)
+(define-key evil-window-map         (kbd "C-_") 'evil-normal-state)
+(define-key evil-operator-state-map (kbd "C-_") 'evil-normal-state)
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+(setq create-lockfiles nil)
+
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (shell . t)))
