@@ -1,7 +1,6 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
-(package-refresh-contents)
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -16,6 +15,8 @@
 (use-package ledger-mode)
 (use-package anti-zenburn-theme)
 (use-package powerline)
+
+(load-theme 'anti-zenburn t)
 
 (evil-mode 1)
 (powerline-center-evil-theme)
@@ -51,7 +52,12 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
+(setq vc-follow-symlinks t)
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
    (shell . t)))
+
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
