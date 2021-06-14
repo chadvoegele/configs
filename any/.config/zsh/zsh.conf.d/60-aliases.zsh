@@ -90,4 +90,3 @@ alias jq=jql
 alias qc=quick_cd
 alias dm=docker-machine
 alias st=screensaver_toggle.sh
-alias ta=textadept-curses
