@@ -5,3 +5,6 @@
 [include]
   path = ~/.config/git/aliases
   path = ~/.config/git/core
+
+[init]
+  defaultBranch = main
