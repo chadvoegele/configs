@@ -59,6 +59,4 @@ xkb_symbols "basic" {
     // End alphanumeric section
 
     include "level3(alt_switch)"
-    include "altwin(alt_win)"
-    include "altwin(prtsc_rwin)"
 };
