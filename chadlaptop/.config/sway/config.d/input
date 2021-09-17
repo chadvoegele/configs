@@ -1,6 +1,6 @@
 input type:keyboard {
     xkb_layout us_prog
-    xkb_options ctrl:nocaps,altwin:prtsc_rwin
+    xkb_options ctrl:nocaps,ctrl:rctrl_ralt
     repeat_delay 250
     repeat_rate 20
 }
