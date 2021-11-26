@@ -1,4 +1,5 @@
 require('paq-nvim'){
+    'chadvoegele/nvim-slime';
     'neovim/nvim-lspconfig';
     'nvim-lua/completion-nvim';
     'nvim-lua/lsp-status.nvim';
