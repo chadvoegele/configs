@@ -8,6 +8,7 @@ vim.opt.expandtab = true
 vim.opt.guicursor = 'i:block'
 vim.opt.hidden = true
 vim.opt.hlsearch = false
+vim.opt.ignorecase = true
 vim.opt.number = true
 vim.opt.numberwidth = 1
 vim.opt.shiftwidth = 2
