@@ -41,6 +41,9 @@
 (define-key evil-window-map         (kbd "C-_") 'evil-normal-state)
 (define-key evil-operator-state-map (kbd "C-_") 'evil-normal-state)
 
+(setq evil-want-fine-undo t)
+(evil-set-undo-system 'undo-redo)
+
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
