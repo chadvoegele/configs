@@ -30,6 +30,7 @@
 (evil-define-key '(normal) 'global
   (kbd "C-p") 'helm-find-files
   (kbd "C-j") 'helm-mini
+  "U" (kbd "C-r")
 )
 (evil-define-key '(normal visual insert) 'global
   (kbd "C-s") (lambda () (interactive) (evil-force-normal-state) (save-buffer))
