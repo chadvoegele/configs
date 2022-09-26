@@ -6,7 +6,13 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-(require 'use-package)
+(setq quelpa-update-melpa-p nil)
+(unless (package-installed-p 'quelpa)
+  (with-temp-buffer
+    (url-insert-file-contents "https://raw.githubusercontent.com/quelpa/quelpa/master/quelpa.el")
+    (eval-buffer)
+    (quelpa-self-upgrade)))
+
 (setq use-package-always-ensure t)
 
 (use-package evil)
@@ -15,6 +21,11 @@
 (use-package ledger-mode)
 (use-package anti-zenburn-theme)
 (use-package powerline)
+
+(quelpa
+  '(beancount :fetcher url :url "https://raw.githubusercontent.com/beancount/beancount-mode/main/beancount.el"))
+(require 'beancount)
+(add-to-list 'auto-mode-alist '("\\.beancount\\'" . beancount-mode))
 
 (load-theme 'anti-zenburn t)
 
