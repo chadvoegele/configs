@@ -80,3 +80,12 @@ mode passthrough {
 	bindsym $mod+F11 mode default
 }
 bindsym $mod+F11 mode passthrough
+bindsym Ctrl+Alt+f1 exec "chvt 1"
+bindsym Ctrl+Alt+f2 exec "chvt 2"
+bindsym Ctrl+Alt+f3 exec "chvt 3"
+bindsym Ctrl+Alt+f4 exec "chvt 4"
+bindsym Ctrl+Alt+f5 exec "chvt 5"
+bindsym Ctrl+Alt+f6 exec "chvt 6"
+bindsym Ctrl+Alt+f7 exec "chvt 7"
+bindsym Ctrl+Alt+f8 exec "chvt 8"
+bindsym Ctrl+Alt+f9 exec "chvt 9"
