@@ -20,3 +20,6 @@ vim.opt.tabstop = 2
 vim.opt.virtualedit = 'block'
 vim.opt.whichwrap = '<>[]hl'
 vim.opt.wildmode= {'longest', 'full'}
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevelstart = 20

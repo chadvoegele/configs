@@ -1,0 +1,3 @@
+return {
+  'chadvoegele/nvim-slime'
+}
