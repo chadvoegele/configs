@@ -5,7 +5,7 @@ function open_file_or_dir() {
   elif [[ $# -eq 1 && -d $1 ]]; then
     builtin cd $1;
   else
-    open_file $@;
+    /usr/bin/o $@;
   fi
 }
 
