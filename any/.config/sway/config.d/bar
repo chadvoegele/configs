@@ -1,6 +1,7 @@
 bar {
     position top
     status_command status_bar.sh --config=$HOME/.config/status_bar.conf
+    pango_markup enabled
 
     font Inconsolata 12.0
     colors {
