@@ -1,10 +1,5 @@
-[user]
-  email = chad@voegele.me
-  name = Chad Voegele
-
 [include]
+  path = ~/.config/git/user
   path = ~/.config/git/aliases
   path = ~/.config/git/core
-
-[init]
-  defaultBranch = main
+  path = ~/.config/git/default_branch
