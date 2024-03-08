@@ -2,8 +2,7 @@
 setopt autocd extendedglob
 setopt autolist automenu nobeep
 
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 zstyle :compinstall filename '/home/chad/.zshrc'
 
 # http://zsh.sourceforge.net/Guide/zshguide06.html
