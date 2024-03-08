@@ -17,11 +17,11 @@ prompt_chad_precmd () {
 
   # ref: http://www.nparikh.org/unix/prompt.php
   # ref: http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
-  prompt_color_Bblack='%{\e[1;30m%}' #bold black
+  prompt_color_Bblack='%{\e[1;90m%}' #bold black
   prompt_color_black='%{\e[0;30m%}' #bold black
   prompt_color_default='%{\e[0m%}'   #default
   prompt_color_blue='%{\e[0;34m%}'   #blue
-  prompt_color_Bred='%{\e[1;31m%}'   #bold red
+  prompt_color_Bred='%{\e[1;91m%}'   #bold red
   prompt_color_magenta='%{\e[0;35m%}'   #magenta
 
   prompt_normal_mode="||"

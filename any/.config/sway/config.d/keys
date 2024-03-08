@@ -3,9 +3,10 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term alacritty
+set $term foot
 
 bindsym Mod5+Return exec $term
+bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+Space exec termite --name=launcher -e "launch_program.sh"
 bindsym $mod+Shift+Space exec termite --name=launcher -e "switch_windows.sh"
