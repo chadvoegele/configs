@@ -30,50 +30,10 @@ smart_sudo () {
     fi
 }
 
-function docker-machine() {
-  docker_machine.sh $1 | source /dev/stdin
-}
-
-function quick_cd() {
-  set_cd_map_sh=$(which set_cd_map.sh)
-
-  if [ $? -eq 1 ]; then
-    echo "set_cd_map.sh not found!"
-    return 1
-  fi
-
-  . ${set_cd_map_sh}
-
-  if (( ! ${+CD_MAP} )); then
-    echo "CD_MAP not set!"
-    return 1
-  fi
-
-  if [[ $# -gt 1 || $# -eq 1 && (${argv[1]} == "-h" || ${argv[1]} == "--help") ]]; then
-    echo "Usage: quick_cd [directory abbreivation]"
-    return 1
-  fi
-
-  if [[ $# -eq 0 ]]; then
-    cd
-    return 1
-  fi
-
-  if (( ! ${+CD_MAP[$1]} )); then
-    echo "No directory for $1"
-    return 1
-  fi
-
-  echo "${CD_MAP[$1]}"
-  cd "${CD_MAP[$1]}"
-  return 0
-}
-
 #aliases
 alias -g D='&> /dev/null &!'
 
 alias ls='ls --color=auto'
-alias alsamixer='alsamixer -g'
 alias mv='mv -i'
 alias cp='cp -i'
 alias md='mkdir -p'
@@ -87,6 +47,3 @@ function rgl() { rg --pretty --ignore-case "$@" | less --RAW-CONTROL-CHARS --no-
 alias rg=rgl
 function jql() { jq --color-output "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
 alias jq=jql
-alias qc=quick_cd
-alias dm=docker-machine
-alias st=screensaver_toggle.sh
