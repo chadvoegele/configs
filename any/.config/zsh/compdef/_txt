@@ -1,0 +1,2 @@
+#compdef txt
+_alternative "files:filename:_files -W $HOME/txt"

@@ -43,6 +43,7 @@ alias s='smart_sudo'
 alias o=open_file_or_dir
 alias g=git
 alias v=nvim
+alias t=txt
 function rgl() { rg --pretty --ignore-case "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
 alias rg=rgl
 function jql() { jq --color-output "$@" | less --RAW-CONTROL-CHARS --no-init --quit-if-one-screen }
