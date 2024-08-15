@@ -22,3 +22,4 @@ map('n', 'U', '<C-r>')
 
 map('n', '<C-p>', "<cmd>lua require('telescope.builtin').find_files()<cr>")
 map('n', '<C-j>', "<cmd>lua require('telescope.builtin').buffers({ sort_lastused = true })<cr>")
+map('n', '<C-g>', "<cmd>lua require('telescope.builtin').live_grep()<cr>")
