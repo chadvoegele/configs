@@ -1,0 +1,10 @@
+default_profile = "chad"
+
+[profiles.chad]
+user_id = "@chad:voegele.me"
+
+[profiles.chad-matrix]
+user_id = "@chadvoegele:matrix.org"
+
+[settings.image_preview]
+protocol.type = "sixel"
