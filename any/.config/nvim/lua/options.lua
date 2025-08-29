@@ -1,7 +1,8 @@
-vim.cmd 'colorscheme desert'
+vim.cmd 'colorscheme default'
 vim.opt.autoindent = true
 vim.opt.autoread = true
 vim.opt.autowrite = true
+vim.opt.clipboard = "unnamedplus"
 vim.opt.compatible = false
 vim.opt.completeopt = "menuone,noselect"
 vim.opt.expandtab = true
