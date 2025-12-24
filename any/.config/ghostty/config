@@ -23,3 +23,4 @@ palette = 14=#00abab
 palette = 15=#e4e4e4
 keybind = ctrl+semicolon=text:\x1f
 keybind = ctrl+period=text:\x1e
+app-notifications = no-clipboard-copy
