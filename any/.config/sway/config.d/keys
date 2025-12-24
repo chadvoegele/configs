@@ -3,7 +3,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term foot
+set $term ghostty
 
 bindsym Mod5+Return exec $term
 bindsym $mod+Return exec $term
