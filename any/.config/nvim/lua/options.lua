@@ -1,4 +1,5 @@
-vim.cmd 'colorscheme default'
+vim.cmd[[colorscheme tokyonight]]
+vim.opt.termguicolors = true
 vim.opt.autoindent = true
 vim.opt.autoread = true
 vim.opt.autowrite = true
