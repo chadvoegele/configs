@@ -16,7 +16,6 @@ return {
     end
   end,
   config = function(_, opts)
-    -- TODO upate docs
     local set_llama_hl = function()
       vim.api.nvim_set_hl(0, "llama_hl_fim_hint", {fg = "#b33e00", ctermfg = 202})
       vim.api.nvim_set_hl(0, "llama_hl_fim_info", {fg = "#555555", ctermfg = 219})
