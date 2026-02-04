@@ -12,6 +12,7 @@ bindsym $mod+Space exec termite --name=launcher -e "launch_program.sh"
 bindsym $mod+Shift+Space exec termite --name=launcher -e "switch_windows.sh"
 for_window [app_id="^launcher$"] floating enable, border none
 floating_modifier $mod normal
+bindsym F11 exec swaylock
 bindsym F12 reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 bindsym $mod+$left focus left
