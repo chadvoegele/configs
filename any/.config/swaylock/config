@@ -1,1 +1,6 @@
+# Background image
+image=/usr/share/backgrounds/wallpaper.jpg
+scaling=fill
+
+# Fallback color if image fails to load
 color=000000
