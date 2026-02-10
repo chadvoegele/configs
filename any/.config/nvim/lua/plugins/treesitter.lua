@@ -1,14 +1,17 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  lazy = false,
+  build = ':TSUpdate',
   config = function ()
-    local configs = require("nvim-treesitter.configs")
-    configs.setup({
-      ensure_installed = { "markdown", "markdown_inline" },
-      highlight = { enable = true },
-      indent = { enable = true },
+    require'nvim-treesitter'.install { 'lua', 'beancount', 'python', 'markdown', 'markdown_inline' }
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = { 'lua', 'beancount', 'python', 'markdown', 'markdown_inline' },
+      callback = function()
+        vim.treesitter.start()
+        vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.wo.foldmethod = 'expr'
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      end,
     })
   end,
-  build = function ()
-    require("nvim-treesitter.install").update({ with_sync = true })
-  end
 }
