@@ -1,0 +1,3 @@
+exec WAYLAND_DISPLAY=wayland-1 wayvnc --config=/home/chad/.config/wayvnc/config &
+exec swaybg -c 00AA00 &
+exec foot &

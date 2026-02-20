@@ -1,0 +1,7 @@
+address = 127.0.0.1
+port = 5999
+enable_auth=true
+username = chad
+password = ppppppppppppppppppppppppppppppppppppp
+relax_encryption = true
+use_relative_paths = true
