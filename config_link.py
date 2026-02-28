@@ -88,6 +88,12 @@ def makelinks(verbose, force, home, direc):
 
       if not (os.path.islink(link_dest) and os.readlink(link_dest) == link_src):
         if os.path.isfile(link_dest) or (os.path.islink(link_dest) and not os.readlink(link_dest) == link_src):
+          if os.path.isfile(link_dest) and os.path.isfile(link_src):
+            with open(link_dest, 'rb') as f1, open(link_src, 'rb') as f2:
+              if f1.read() != f2.read():
+                raise ValueError("Files are different: " + link_dest + ", " + link_src)
+              print(f"Files are identical: " + link_dest + ", " + link_src)
+
           if verbose:
             print("Removing: " + link_dest)
           if force:
