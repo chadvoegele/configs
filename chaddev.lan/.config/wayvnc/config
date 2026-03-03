@@ -5,3 +5,5 @@ username = chad
 password = ppppppppppppppppppppppppppppppppppppp
 relax_encryption = true
 use_relative_paths = true
+xkb_layout = us_prog
+xkb_options = ctrl:nocaps,ctrl:rctrl_ralt
