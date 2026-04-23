@@ -1,0 +1,4 @@
+[user]
+	signingkey = chad@voegele.me
+[commit]
+	gpgsign = true

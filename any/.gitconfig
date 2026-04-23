@@ -3,3 +3,4 @@
   path = ~/.config/git/aliases
   path = ~/.config/git/core
   path = ~/.config/git/default_branch
+  path = ~/.config/git/signing
