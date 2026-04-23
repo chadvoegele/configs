@@ -7,9 +7,10 @@ return {
       local api_key = file:read('*line')
       file:close()
       vim.g.llama_config = {
+        auto_inst = true,
         api_key = api_key,
-        model_fim = 'unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_0',
-        model_inst = 'unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_0',
+        model_inst = 'unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q4_K_XL',
+        model_fim = 'unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q4_K_XL',
       }
     else
       vim.notify("llama.vim: api_key not found in /dev/shm/llama.vim_key.txt", vim.log.levels.WARN)
