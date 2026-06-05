@@ -1,0 +1,5 @@
+Host chadserver.lan
+        HostName chadserver.lan
+        ControlPath ~/.ssh/controlmasters/%r@%h:%p
+        ControlMaster auto
+        ControlPersist 10m
