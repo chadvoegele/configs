@@ -8,3 +8,9 @@ user_id = "@chadvoegele:matrix.org"
 
 [settings.image_preview]
 protocol.type = "sixel"
+
+[macros.insert]
+"<C-G>" = "<Esc>:editor<Enter>"
+
+[macros.normal]
+"<C-G>" = ":editor<Enter>"
