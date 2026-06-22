@@ -1,7 +1,8 @@
-local function map(mode, lhs, rhs)
-  vim.api.nvim_set_keymap(string.sub(mode, 1, 1), lhs, rhs, {noremap = true})
+local function map(mode, lhs, rhs, opts)
+  opts = opts or {noremap = true}
+  vim.keymap.set(string.sub(mode, 1, 1), lhs, rhs, opts)
   if string.len(mode) > 1 then
-    return map(string.sub(mode, 2), lhs, rhs)
+    return map(string.sub(mode, 2), lhs, rhs, opts)
   end
 end
 
@@ -20,6 +21,16 @@ map('invoc', '<C-_>', '<esc>')
 
 map('n', 'U', '<C-r>')
 
-map('n', '<C-p>', "<cmd>lua require('telescope.builtin').find_files()<cr>")
+map('n', '<C-p>', function()
+  require('telescope.builtin').find_files({
+    find_command = {
+      'rg',
+      '--files',
+      '--hidden',
+      '--glob',
+      '!.git/*'
+    },
+  })
+end)
 map('n', '<C-j>', "<cmd>lua require('telescope.builtin').buffers({ sort_lastused = true })<cr>")
 map('n', '<C-g>', "<cmd>lua require('telescope.builtin').live_grep()<cr>")
