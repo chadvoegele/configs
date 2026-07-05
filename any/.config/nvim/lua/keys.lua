@@ -33,4 +33,14 @@ map('n', '<C-p>', function()
   })
 end)
 map('n', '<C-j>', "<cmd>lua require('telescope.builtin').buffers({ sort_lastused = true })<cr>")
-map('n', '<C-g>', "<cmd>lua require('telescope.builtin').live_grep()<cr>")
+map('n', '<C-g>', function()
+  require('telescope.builtin').live_grep({
+    additional_args = function()
+      return {
+        '--hidden',
+        '--glob',
+        '!.git/*'
+      }
+    end,
+  })
+end)
