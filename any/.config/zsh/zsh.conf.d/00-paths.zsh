@@ -1,2 +1,2 @@
-user_paths=("$HOME/bin")
+user_paths=()
 user_comp_paths=("$HOME/.config/zsh/compdef")
