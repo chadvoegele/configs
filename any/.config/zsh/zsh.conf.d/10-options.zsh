@@ -1,6 +1,18 @@
+# History (from https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/)
+## Load 4000 lines of history (for Ctrl+R backward search), but save O(∞)
+HISTSIZE=4000
 HISTFILE=~/.histfile
-HISTSIZE=100000
-SAVEHIST=100000
+SAVEHIST=10000000
+
+## Do not save (adjacent) duplicate entries
+setopt HIST_IGNORE_DUPS
+
+## Append history entries to `~/.histfile` when commands are run.
+setopt INC_APPEND_HISTORY
+## …but do not share history (enabled by default in NixOS’s /etc/zshrc).
+unsetopt SHARE_HISTORY
+
+
 WORDCHARS='*?[]~=&;!#$%^(){}-'
 
 export DE="generic"
@@ -13,6 +25,4 @@ stty -ixon -ixoff
 setopt auto_pushd               # dirs
 setopt pushd_ignore_dups        # ignore duplicates in dir stack
 setopt rm_star_wait             # pause before confirming rm *
-setopt share_history            # share history between open shells
-setopt append_history           # append new history instead of overwriting
 setopt interactive_comments     # allow comments
