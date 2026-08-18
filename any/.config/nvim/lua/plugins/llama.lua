@@ -10,8 +10,8 @@ return {
         auto_fim = true,
         enable_at_startup = true,
         api_key = api_key,
-        model_inst = 'unsloth/Qwen3.6-35B-A3B-GGUF:Q4_K_XL',
-        model_fim = 'unsloth/Qwen3.6-35B-A3B-GGUF:Q4_K_XL',
+        model_inst = 'ggml-org/Qwen3.8-27B-GGUF:Q4_K_M',
+        model_fim = 'ggml-org/Qwen3.8-27B-GGUF:Q4_K_M',
       }
     else
       vim.notify("llama.vim: api_key not found in /dev/shm/llama.vim_key.txt", vim.log.levels.WARN)
