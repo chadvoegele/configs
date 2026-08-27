@@ -1,0 +1,10 @@
+{
+  "llm": {
+    "url": "https://chaddev.lan.voegele.me/llama/",
+    "model": "ggml-org/Qwen3.8-27B-GGUF:Q4_K_M",
+    "api_key_file": "~/.local/state/leda/llama_api_key.txt"
+  },
+  "google_cloud": {
+    "api_key_file": "~/.local/state/leda/google_tts_api_key.txt"
+  }
+}
