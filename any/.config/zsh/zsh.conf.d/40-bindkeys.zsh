@@ -31,6 +31,8 @@ bindkey -M vicmd i vi-insert
 bindkey -M vicmd '?' history-incremental-pattern-search-backward
 bindkey -M vicmd '/' history-incremental-pattern-search-forward
 bindkey -M viins '^^' insert-last-word 
+# Android private-use alternative; keep Ctrl+^ for other terminal clients.
+bindkey -M viins $'\ue000' insert-last-word
 bindkey -M viins '^h' backward-delete-char
 bindkey -M viins '^w' backward-kill-word
 bindkey -M viins '^u' kill-whole-line
